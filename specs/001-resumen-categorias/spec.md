@@ -8,6 +8,12 @@
 
 **Entrada**: Descripción del usuario: «Nombre corto: resumen-categorias. Quiero que la API de OPITA 360 ofrezca un resumen del catálogo por categoría turística, para que el frontend o cualquier cliente sepa qué categorías hay sin descargar y recorrer todos los destinos. Para cada categoría presente en el catálogo debe indicar cuántos destinos tiene y el precio más bajo y el más alto entre ellos, en pesos colombianos. Solo aparecen categorías que tengan al menos un destino. El resumen debe ser coherente con el catálogo de destinos que ya devuelve la API. Es una consulta de solo lectura y no debe cambiar el comportamiento de los endpoints existentes.»
 
+## Clarifications
+
+### Session 2026-11-24
+
+- Q: ¿Qué ruta y qué nombres de campos debe tener la respuesta del resumen? → A: `GET /api/categories` (sin `/summary`, siguiendo el patrón de `/api/destinations`), con campos en inglés `total_destinations`, `currency` (`"COP"`) y `categories[]` con `category`, `count`, `min_price`, `max_price`.
+
 ## Escenarios de usuario y pruebas *(obligatorio)*
 
 ### Historia de usuario 1 - Consultar el resumen por categoría (Prioridad: P1)
@@ -70,12 +76,12 @@ Quien integra la API necesita que añadir el resumen no altere nada de lo que ya
 
 ### Requisitos funcionales
 
-- **FR-001**: El sistema MUST ofrecer una consulta de solo lectura que devuelva el resumen del catálogo agrupado por categoría turística.
-- **FR-002**: Para cada categoría incluida, el resumen MUST indicar el nombre de la categoría, el número de destinos que tiene, el precio más bajo y el precio más alto entre esos destinos.
-- **FR-003**: Los precios del resumen MUST expresarse en pesos colombianos (COP), en la misma unidad y como los mismos valores numéricos que usan los destinos del catálogo, sin conversiones ni redondeos.
+- **FR-001**: El sistema MUST ofrecer una consulta de solo lectura, `GET /api/categories`, que devuelva el resumen del catálogo agrupado por categoría turística.
+- **FR-002**: Para cada categoría incluida, el resumen MUST indicar el nombre de la categoría (`category`), el número de destinos que tiene (`count`), el precio más bajo (`min_price`) y el precio más alto (`max_price`) entre esos destinos.
+- **FR-003**: Los precios del resumen MUST expresarse en pesos colombianos (COP), en la misma unidad y como los mismos valores numéricos que usan los destinos del catálogo, sin conversiones ni redondeos. La respuesta MUST incluir el campo `currency` con el valor `"COP"` para dejar la unidad explícita.
 - **FR-004**: El resumen MUST incluir solo las categorías que tengan al menos un destino en el catálogo; las categorías sin destinos no aparecen.
 - **FR-005**: El resumen MUST derivarse del mismo catálogo de destinos que devuelve la API, de modo que la suma de los conteos por categoría sea igual al total de destinos y los precios mínimo y máximo de cada categoría coincidan con los de sus destinos.
-- **FR-006**: El resumen MUST incluir también el número total de destinos del catálogo, para que el cliente verifique la coherencia sin otra consulta.
+- **FR-006**: El resumen MUST incluir también el número total de destinos del catálogo (`total_destinations`), para que el cliente verifique la coherencia sin otra consulta.
 - **FR-007**: Las categorías MUST devolverse en un orden estable y predecible (alfabético por nombre de categoría), de modo que dos consultas con el mismo catálogo den respuestas idénticas.
 - **FR-008**: La consulta MUST NOT modificar el catálogo ni ningún otro dato; solicitarla repetidamente no produce efectos secundarios.
 - **FR-009**: La consulta MUST NOT cambiar el comportamiento ni la forma de respuesta de los endpoints existentes (`GET /`, `GET /api/destinations`, `GET /api/destinations/{destination_id}` y `POST /api/recommendations`).
@@ -103,7 +109,7 @@ Quien integra la API necesita que añadir el resumen no altere nada de lo que ya
 
 - «Categoría» es el valor de categoría que ya tiene cada destino del catálogo (hoy: Aventura, Bienestar, Cultura y Naturaleza); esta funcionalidad no crea, renombra ni valida categorías.
 - Las categorías se agrupan por su valor tal como está escrito en el catálogo, sin normalizar mayúsculas ni espacios.
-- Los precios del catálogo ya están en pesos colombianos y se reportan tal cual, sin símbolo de moneda ni formato de texto; la unidad se indica de forma explícita en la respuesta.
+- Los precios del catálogo ya están en pesos colombianos y se reportan tal cual, sin símbolo de moneda ni formato de texto; la unidad se indica de forma explícita en el campo `currency` (`"COP"`) de la respuesta.
 - El orden alfabético por nombre de categoría es la decisión por defecto, porque la descripción no pide otro orden.
 - El resumen cubre todo el catálogo; no admite filtros por municipio, rango de precio ni otros criterios (fuera de alcance).
 - El frontend no cambia en esta funcionalidad; el resumen queda disponible para que lo consuman el frontend u otros clientes más adelante. El modo demostración sin API queda fuera de alcance.
