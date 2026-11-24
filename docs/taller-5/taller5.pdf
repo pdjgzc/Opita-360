@@ -1,0 +1,757 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 21 0 R] /Count 8 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R /Annots [6 0 R 7 0 R] >>
+endobj
+5 0 obj
+<< /Length 2821 >>
+stream
+0.12 0.22 0.19 rg
+0.12 0.22 0.19 RG
+BT /F1 17 Tf 1 0 0 1 45 798 Tm (FET-QX7 | OPITA 360 | Sistema de Agentes) Tj ET
+BT /F1 13 Tf 1 0 0 1 45 768 Tm (1. Proyecto y herramienta) Tj ET
+BT /F1 8 Tf 1 0 0 1 45 29 Tm (FET-QX7 | correccion-rubrica | docs/taller-5 | Página 1/8) Tj ET
+BT /F1 12 Tf 1 0 0 1 45 730 Tm (OPITA 360 permite explorar destinos turísticos del Huila y preparar) Tj ET
+BT /F1 12 Tf 1 0 0 1 45 712 Tm (itinerarios. El frontend usa React, Vite y lucide-react; el backend, Python) Tj ET
+BT /F1 12 Tf 1 0 0 1 45 694 Tm (con FastAPI/Pydantic. Los datos son de demostración en memoria.) Tj ET
+BT /F1 12 Tf 1 0 0 1 45 676 Tm (database/schema.sql prepara PostgreSQL, sin persistencia conectada.) Tj ET
+BT /F1 12 Tf 1 0 0 1 45 642 Tm (Se utiliza un sistema común de revisión porque interfaz y API comparten) Tj ET
+BT /F1 12 Tf 1 0 0 1 45 624 Tm (contratos. El controlador Python organiza tareas fijas y valida evidencias;) Tj ET
+BT /F1 12 Tf 1 0 0 1 45 606 Tm (los modelos analizan contexto. No escriben código turístico, ejecutan shell ni) Tj ET
+BT /F1 12 Tf 1 0 0 1 45 588 Tm (publican cambios. Especificación, plan y tareas delimitan el trabajo.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 554 Tm (La elaboración se realizó con Codex; la inferencia usa Ollama local y qwen3.5:4b. El enunciado) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 540 Tm (enumera Copilot VS Code, Claude Code y OpenCode: aceptar esta herramienta requiere) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 526 Tm (confirmación del profesor. Los permisos Python de este documento no son permisos nativos de) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 512 Tm (esas plataformas.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 486 Tm (La base publicada es 8cce952. El PR #2 fue fusionado el 18 de noviembre de 2026 según consulta) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 472 Tm (GET de GitHub. Esta revisión está en taller5/correccion-rubrica y permanece local, sin commit) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 458 Tm (ni publicación. No se acredita el archivo entregado en Q10.) Tj ET
+0.06 0.27 0.62 rg
+BT /F1 10 Tf 1 0 0 1 45 432 Tm (Repositorio OPITA 360) Tj ET
+0.12 0.22 0.19 rg
+0.06 0.27 0.62 rg
+BT /F1 10 Tf 1 0 0 1 45 409 Tm (Pull Request #2: historial del Taller 5) Tj ET
+0.12 0.22 0.19 rg
+BT /F1 10 Tf 1 0 0 1 45 386 Tm (Entorno: Python 3.10+, Node compatible con lockfile y Ollama en 127.0.0.1:11434. MCP) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 372 Tm (filesystem 2.3.0 usa stdio y Node portátil 24.13.0. No se añadieron dependencias ni se) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 358 Tm (reemplazó Node del sistema.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 332 Tm (Proyecto Albatros: nombre clave del sistema de revisión de OPITA 360 solicitado en el) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 318 Tm (enunciado. Los requisitos ambiguos se identifican en la sección 3, sin inventar resultados ni) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 304 Tm (aceptación del profesor.) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Annot /Subtype /Link /Rect [45 429 160.5 444] /Border [0 0 0] /A << /S /URI /URI (https://github.com/2020morales/opita-360) >> >>
+endobj
+7 0 obj
+<< /Type /Annot /Subtype /Link /Rect [45 406 259.5 421] /Border [0 0 0] /A << /S /URI /URI (https://github.com/2020morales/opita-360/pull/2) >> >>
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 9 0 R /Annots [] >>
+endobj
+9 0 obj
+<< /Length 5666 >>
+stream
+0.12 0.22 0.19 rg
+0.12 0.22 0.19 RG
+BT /F1 17 Tf 1 0 0 1 45 798 Tm (FET-QX7 | OPITA 360 | Sistema de Agentes) Tj ET
+BT /F1 13 Tf 1 0 0 1 45 768 Tm (2. Sistema de agentes | tabla de responsabilidades) Tj ET
+BT /F1 8 Tf 1 0 0 1 45 29 Tm (FET-QX7 | correccion-rubrica | docs/taller-5 | Página 2/8) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 730 Tm (Orquestador y cuatro especialistas reales. Todos atienden el proyecto completo desde su) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 716 Tm (responsabilidad; frontend y backend tienen ámbitos de código separados. El controlador invoca) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 702 Tm (cada rol secuencialmente y reúne los informes. No existe comunicación lateral.) Tj ET
+0.4 w 45 650 87 26 re S
+BT /F1 9 Tf 1 0 0 1 51 661 Tm (Rol / stack) Tj ET
+0.4 w 132 650 85 26 re S
+BT /F1 9 Tf 1 0 0 1 138 661 Tm (Quién / cuándo) Tj ET
+0.4 w 217 650 111 26 re S
+BT /F1 9 Tf 1 0 0 1 223 661 Tm (Entrada) Tj ET
+0.4 w 328 650 111 26 re S
+BT /F1 9 Tf 1 0 0 1 334 661 Tm (Salida) Tj ET
+0.4 w 439 650 111 26 re S
+BT /F1 9 Tf 1 0 0 1 445 661 Tm (Responsabilidad) Tj ET
+0.4 w 45 600 87 50 re S
+BT /F1 9 Tf 1 0 0 1 51 635 Tm (Orquestador) Tj ET
+BT /F1 9 Tf 1 0 0 1 51 623 Tm (\(ambos\)) Tj ET
+0.4 w 132 600 85 50 re S
+BT /F1 9 Tf 1 0 0 1 138 635 Tm (Operador, al) Tj ET
+BT /F1 9 Tf 1 0 0 1 138 623 Tm (inicio) Tj ET
+0.4 w 217 600 111 50 re S
+BT /F1 9 Tf 1 0 0 1 223 635 Tm (Especificación y) Tj ET
+BT /F1 9 Tf 1 0 0 1 223 623 Tm (cuatro tareas) Tj ET
+0.4 w 328 600 111 50 re S
+BT /F1 9 Tf 1 0 0 1 334 635 Tm (Plan narrativo;) Tj ET
+BT /F1 9 Tf 1 0 0 1 334 623 Tm (controlador reúne) Tj ET
+BT /F1 9 Tf 1 0 0 1 334 611 Tm (reportes) Tj ET
+0.4 w 439 600 111 50 re S
+BT /F1 9 Tf 1 0 0 1 445 635 Tm (Coordina; no) Tj ET
+BT /F1 9 Tf 1 0 0 1 445 623 Tm (implementa ni amplía) Tj ET
+BT /F1 9 Tf 1 0 0 1 445 611 Tm (permisos) Tj ET
+0.4 w 45 550 87 50 re S
+BT /F1 9 Tf 1 0 0 1 51 585 Tm (Frontend T03) Tj ET
+BT /F1 9 Tf 1 0 0 1 51 573 Tm (\(subagente\)) Tj ET
+0.4 w 132 550 85 50 re S
+BT /F1 9 Tf 1 0 0 1 138 585 Tm (Controlador tras) Tj ET
+BT /F1 9 Tf 1 0 0 1 138 573 Tm (plan) Tj ET
+0.4 w 217 550 111 50 re S
+BT /F1 9 Tf 1 0 0 1 223 585 Tm (React, estilos,) Tj ET
+BT /F1 9 Tf 1 0 0 1 223 573 Tm (paquetes y main vía) Tj ET
+BT /F1 9 Tf 1 0 0 1 223 561 Tm (MCP) Tj ET
+0.4 w 328 550 111 50 re S
+BT /F1 9 Tf 1 0 0 1 334 585 Tm (Hallazgos, límites y) Tj ET
+BT /F1 9 Tf 1 0 0 1 334 573 Tm (evidencia autorizada) Tj ET
+0.4 w 439 550 111 50 re S
+BT /F1 9 Tf 1 0 0 1 445 585 Tm (Filtros, API, demo,) Tj ET
+BT /F1 9 Tf 1 0 0 1 445 573 Tm (teclado y etiquetas) Tj ET
+0.4 w 45 500 87 50 re S
+BT /F1 9 Tf 1 0 0 1 51 535 Tm (Backend T04) Tj ET
+BT /F1 9 Tf 1 0 0 1 51 523 Tm (\(subagente\)) Tj ET
+0.4 w 132 500 85 50 re S
+BT /F1 9 Tf 1 0 0 1 138 535 Tm (Controlador tras) Tj ET
+BT /F1 9 Tf 1 0 0 1 138 523 Tm (T03) Tj ET
+0.4 w 217 500 111 50 re S
+BT /F1 9 Tf 1 0 0 1 223 535 Tm (FastAPI/Pydantic,) Tj ET
+BT /F1 9 Tf 1 0 0 1 223 523 Tm (requisitos, esquema y) Tj ET
+BT /F1 9 Tf 1 0 0 1 223 511 Tm (MCP) Tj ET
+0.4 w 328 500 111 50 re S
+BT /F1 9 Tf 1 0 0 1 334 535 Tm (Hallazgos, límites y) Tj ET
+BT /F1 9 Tf 1 0 0 1 334 523 Tm (evidencia autorizada) Tj ET
+0.4 w 439 500 111 50 re S
+BT /F1 9 Tf 1 0 0 1 445 535 Tm (HTTP, validaciones,) Tj ET
+BT /F1 9 Tf 1 0 0 1 445 523 Tm (presupuesto y memoria) Tj ET
+0.4 w 45 450 87 50 re S
+BT /F1 9 Tf 1 0 0 1 51 485 Tm (Calidad T05) Tj ET
+BT /F1 9 Tf 1 0 0 1 51 473 Tm (\(subagente;) Tj ET
+BT /F1 9 Tf 1 0 0 1 51 461 Tm (ambos\)) Tj ET
+0.4 w 132 450 85 50 re S
+BT /F1 9 Tf 1 0 0 1 138 485 Tm (Controlador tras) Tj ET
+BT /F1 9 Tf 1 0 0 1 138 473 Tm (T04) Tj ET
+0.4 w 217 450 111 50 re S
+BT /F1 9 Tf 1 0 0 1 223 485 Tm (Reportes, pruebas y) Tj ET
+BT /F1 9 Tf 1 0 0 1 223 473 Tm (dos verificaciones MCP) Tj ET
+0.4 w 328 450 111 50 re S
+BT /F1 9 Tf 1 0 0 1 334 485 Tm (Contraste de) Tj ET
+BT /F1 9 Tf 1 0 0 1 334 473 Tm (afirmaciones y) Tj ET
+BT /F1 9 Tf 1 0 0 1 334 461 Tm (cobertura faltante) Tj ET
+0.4 w 439 450 111 50 re S
+BT /F1 9 Tf 1 0 0 1 445 485 Tm (No confunde build con) Tj ET
+BT /F1 9 Tf 1 0 0 1 445 473 Tm (prueba funcional) Tj ET
+0.4 w 45 400 87 50 re S
+BT /F1 9 Tf 1 0 0 1 51 435 Tm (Seguridad T06) Tj ET
+BT /F1 9 Tf 1 0 0 1 51 423 Tm (\(subagente;) Tj ET
+BT /F1 9 Tf 1 0 0 1 51 411 Tm (ambos\)) Tj ET
+0.4 w 132 400 85 50 re S
+BT /F1 9 Tf 1 0 0 1 138 435 Tm (Controlador tras) Tj ET
+BT /F1 9 Tf 1 0 0 1 138 423 Tm (T05) Tj ET
+0.4 w 217 400 111 50 re S
+BT /F1 9 Tf 1 0 0 1 223 435 Tm (Políticas, reportes,) Tj ET
+BT /F1 9 Tf 1 0 0 1 223 423 Tm (checks y MCP) Tj ET
+0.4 w 328 400 111 50 re S
+BT /F1 9 Tf 1 0 0 1 334 435 Tm (Riesgos y límites; no) Tj ET
+BT /F1 9 Tf 1 0 0 1 334 423 Tm (aprobación) Tj ET
+0.4 w 439 400 111 50 re S
+BT /F1 9 Tf 1 0 0 1 445 435 Tm (Permisos, denegaciones) Tj ET
+BT /F1 9 Tf 1 0 0 1 445 423 Tm (y controles humanos) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 380 Tm (Tabla continuada en la página 3: herramientas, archivos, modelo y prohibiciones; ningún agente) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 366 Tm (modifica archivos. Contrato: versión, task_id, agent, status, evidence, findings y) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 352 Tm (limitations. El host valida tarea-agente, archivos de la tarea, SHA/tamaño y duplicados. Los) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 338 Tm (hashes inventarían archivos; no demuestran lectura integral ni verdad de las conclusiones.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 312 Tm (cronista-lunar: requisito textual pendiente de aclarar sobre registro de estado de ánimo; no) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 298 Tm (forma parte de los cinco roles ejecutables. No se afirma que exista ni se simulan emociones.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 284 Tm (La frase Revisado y aprobado por el profesor queda pendiente de una revisión auténtica.) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 11 0 R /Annots [] >>
+endobj
+11 0 obj
+<< /Length 5414 >>
+stream
+0.12 0.22 0.19 rg
+0.12 0.22 0.19 RG
+BT /F1 17 Tf 1 0 0 1 45 798 Tm (FET-QX7 | OPITA 360 | Sistema de Agentes) Tj ET
+BT /F1 13 Tf 1 0 0 1 45 768 Tm (2. Sistema de agentes | modelos y permisos mínimos) Tj ET
+BT /F1 8 Tf 1 0 0 1 45 29 Tm (FET-QX7 | correccion-rubrica | docs/taller-5 | Página 3/8) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 730 Tm (Modelo exacto de los cinco roles: ollama-local / qwen3.5:4b. Disponibilidad local y ausencia) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 716 Tm (de credenciales remotas justifican su uso; no existe benchmark de superioridad. Los perfiles) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 702 Tm (planner/coder/reviewer separan contexto, no modelo ni independencia de errores.) Tj ET
+0.4 w 45 650 66 26 re S
+BT /F1 8 Tf 1 0 0 1 51 661 Tm (Agente) Tj ET
+0.4 w 111 650 109 26 re S
+BT /F1 8 Tf 1 0 0 1 117 661 Tm (Herramientas Python) Tj ET
+0.4 w 220 650 225 26 re S
+BT /F1 8 Tf 1 0 0 1 226 661 Tm (Lecturas exactas) Tj ET
+0.4 w 445 650 105 26 re S
+BT /F1 8 Tf 1 0 0 1 451 661 Tm (Modelo y motivo) Tj ET
+0.4 w 45 588 66 62 re S
+BT /F1 8 Tf 1 0 0 1 51 635 Tm (orquestador) Tj ET
+0.4 w 111 588 109 62 re S
+BT /F1 8 Tf 1 0 0 1 117 635 Tm (delegate;) Tj ET
+BT /F1 8 Tf 1 0 0 1 117 623 Tm (validate_report; llm_chat) Tj ET
+0.4 w 220 588 225 62 re S
+BT /F1 8 Tf 1 0 0 1 226 635 Tm (Sin lectura directa; recibe especificación/tareas) Tj ET
+0.4 w 445 588 105 62 re S
+BT /F1 8 Tf 1 0 0 1 451 635 Tm (qwen3.5:4b;) Tj ET
+BT /F1 8 Tf 1 0 0 1 451 623 Tm (Planificación acotada) Tj ET
+BT /F1 8 Tf 1 0 0 1 451 611 Tm (sin credenciales; no se) Tj ET
+BT /F1 8 Tf 1 0 0 1 451 599 Tm (midió superioridad) Tj ET
+0.4 w 45 526 66 62 re S
+BT /F1 8 Tf 1 0 0 1 51 573 Tm (frontend) Tj ET
+0.4 w 111 526 109 62 re S
+BT /F1 8 Tf 1 0 0 1 117 573 Tm (read_context; llm_chat;) Tj ET
+BT /F1 8 Tf 1 0 0 1 117 561 Tm (external_mcp) Tj ET
+0.4 w 220 526 225 62 re S
+BT /F1 8 Tf 1 0 0 1 226 573 Tm (README.md, AGENTS.md, frontend/AGENTS.md,) Tj ET
+BT /F1 8 Tf 1 0 0 1 226 561 Tm (.github/skills/frontend-react/SKILL.md,) Tj ET
+BT /F1 8 Tf 1 0 0 1 226 549 Tm (frontend/package.json, frontend/src/main.jsx,) Tj ET
+BT /F1 8 Tf 1 0 0 1 226 537 Tm (frontend/src/styles.css) Tj ET
+0.4 w 445 526 105 62 re S
+BT /F1 8 Tf 1 0 0 1 451 573 Tm (qwen3.5:4b; Inspección) Tj ET
+BT /F1 8 Tf 1 0 0 1 451 561 Tm (local React; revisión) Tj ET
+BT /F1 8 Tf 1 0 0 1 451 549 Tm (humana compensa errores) Tj ET
+BT /F1 8 Tf 1 0 0 1 451 537 Tm (del modelo pequeño) Tj ET
+0.4 w 45 464 66 62 re S
+BT /F1 8 Tf 1 0 0 1 51 511 Tm (backend) Tj ET
+0.4 w 111 464 109 62 re S
+BT /F1 8 Tf 1 0 0 1 117 511 Tm (read_context; llm_chat;) Tj ET
+BT /F1 8 Tf 1 0 0 1 117 499 Tm (external_mcp) Tj ET
+0.4 w 220 464 225 62 re S
+BT /F1 8 Tf 1 0 0 1 226 511 Tm (README.md, AGENTS.md, backend/AGENTS.md,) Tj ET
+BT /F1 8 Tf 1 0 0 1 226 499 Tm (.github/skills/backend-fastapi/SKILL.md,) Tj ET
+BT /F1 8 Tf 1 0 0 1 226 487 Tm (backend/app/main.py, backend/requirements.txt,) Tj ET
+BT /F1 8 Tf 1 0 0 1 226 475 Tm (database/schema.sql) Tj ET
+0.4 w 445 464 105 62 re S
+BT /F1 8 Tf 1 0 0 1 451 511 Tm (qwen3.5:4b; Inspección) Tj ET
+BT /F1 8 Tf 1 0 0 1 451 499 Tm (local de contratos;) Tj ET
+BT /F1 8 Tf 1 0 0 1 451 487 Tm (pruebas TestClient) Tj ET
+BT /F1 8 Tf 1 0 0 1 451 475 Tm (contrastan opiniones) Tj ET
+0.4 w 45 402 66 62 re S
+BT /F1 8 Tf 1 0 0 1 51 449 Tm (calidad) Tj ET
+0.4 w 111 402 109 62 re S
+BT /F1 8 Tf 1 0 0 1 117 449 Tm (read_context; llm_chat) Tj ET
+0.4 w 220 402 225 62 re S
+BT /F1 8 Tf 1 0 0 1 226 449 Tm (README.md, frontend/package.json,) Tj ET
+BT /F1 8 Tf 1 0 0 1 226 437 Tm (backend/requirements.txt,) Tj ET
+BT /F1 8 Tf 1 0 0 1 226 425 Tm (agents/tests/test_runtime.py,) Tj ET
+BT /F1 8 Tf 1 0 0 1 226 413 Tm (backend/tests/test_api.py) Tj ET
+0.4 w 445 402 105 62 re S
+BT /F1 8 Tf 1 0 0 1 451 449 Tm (qwen3.5:4b; Contexto de) Tj ET
+BT /F1 8 Tf 1 0 0 1 451 437 Tm (revisor separado; mismo) Tj ET
+BT /F1 8 Tf 1 0 0 1 451 425 Tm (modelo no garantiza) Tj ET
+BT /F1 8 Tf 1 0 0 1 451 413 Tm (independencia) Tj ET
+0.4 w 45 340 66 62 re S
+BT /F1 8 Tf 1 0 0 1 51 387 Tm (seguridad) Tj ET
+0.4 w 111 340 109 62 re S
+BT /F1 8 Tf 1 0 0 1 117 387 Tm (read_context; llm_chat) Tj ET
+0.4 w 220 340 225 62 re S
+BT /F1 8 Tf 1 0 0 1 226 387 Tm (AGENTS.md, agents/manifest.v1.json,) Tj ET
+BT /F1 8 Tf 1 0 0 1 226 375 Tm (agents/runtime.py, agents/mcp_probe.py) Tj ET
+0.4 w 445 340 105 62 re S
+BT /F1 8 Tf 1 0 0 1 451 387 Tm (qwen3.5:4b; Revisión) Tj ET
+BT /F1 8 Tf 1 0 0 1 451 375 Tm (local sin salida remota;) Tj ET
+BT /F1 8 Tf 1 0 0 1 451 363 Tm (no sustituye auditoría) Tj ET
+BT /F1 8 Tf 1 0 0 1 451 351 Tm (de seguridad) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 320 Tm (Denegado para todos: escribir, shell libre, secretos, PostgreSQL, commit, push y merge. external_mcp) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 306 Tm (solo para frontend/backend; cliente permite read_text_file y exporta una copia temporal. Node conserva) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 292 Tm (permisos del usuario: no es sandbox OS. La excepción de red del host es loopback fijo, sin proxy,) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 278 Tm (redirects ni proveedor alterno.) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 252 Tm (Límites: cuatro delegaciones; dos correcciones de formato por rol, tres intentos totales; 4000) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 238 Tm (caracteres por extracto, 65536 bytes por archivo, 768 tokens de salida. escritura-orbital no tiene) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 224 Tm (definición operativa disponible: no se concede escritura para satisfacer ese término.) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 13 0 R /Annots [] >>
+endobj
+13 0 obj
+<< /Length 3482 >>
+stream
+0.12 0.22 0.19 rg
+0.12 0.22 0.19 RG
+BT /F1 17 Tf 1 0 0 1 45 798 Tm (FET-QX7 | OPITA 360 | Sistema de Agentes) Tj ET
+BT /F1 13 Tf 1 0 0 1 45 768 Tm (2. Sistema de agentes | diagrama de estructura) Tj ET
+BT /F1 8 Tf 1 0 0 1 45 29 Tm (FET-QX7 | correccion-rubrica | docs/taller-5 | Página 4/8) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 730 Tm (Patrón centralizado adaptado a revisión de React/FastAPI: todas las solicitudes y devoluciones) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 716 Tm (pasan por el controlador. El operador ejecuta comprobaciones; los modelos no eligen comandos.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 702 Tm (Las listas de lectura corresponden a la tabla anterior.) Tj ET
+0.92 0.96 0.92 rg 185 630 235 48 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 194 656.5 Tm (Humano: alcance, revisión de hallazgos y) Tj ET
+BT /F1 9 Tf 1 0 0 1 194 645.5 Tm (publicación) Tj ET
+0.92 0.96 0.92 rg 185 455 235 55 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 194 479.5 Tm (Orquestador + controlador Python) Tj ET
+0.7 w 290 630 m 290 510 l S
+287 515 m 290 510 l 293 515 l S
+0.7 w 310 510 m 310 630 l S
+307 625 m 310 630 l 313 625 l S
+0.92 0.96 0.92 rg 45 555 215 50 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 54 582.5 Tm (T03 React: read_context + MCP; lectura) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 571.5 Tm (frontend/src permitida) Tj ET
+0.7 w 210 510 m 150 555 l S
+147 550 m 150 555 l 153 550 l S
+0.7 w 162 555 m 222 510 l S
+219 515 m 222 510 l 225 515 l S
+0.92 0.96 0.92 rg 335 555 215 50 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 344 582.5 Tm (T04 FastAPI: read_context + MCP; lectura) Tj ET
+BT /F1 9 Tf 1 0 0 1 344 571.5 Tm (backend/app permitida) Tj ET
+0.7 w 390 510 m 440 555 l S
+437 550 m 440 555 l 443 550 l S
+0.7 w 452 555 m 402 510 l S
+399 515 m 402 510 l 405 515 l S
+0.92 0.96 0.92 rg 45 345 215 50 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 54 372.5 Tm (T05 Calidad: read_context; pruebas +) Tj ET
+BT /F1 9 Tf 1 0 0 1 54 361.5 Tm (reportes + checks + MCP) Tj ET
+0.7 w 210 455 m 150 395 l S
+147 400 m 150 395 l 153 400 l S
+0.7 w 162 395 m 222 455 l S
+219 450 m 222 455 l 225 450 l S
+0.92 0.96 0.92 rg 335 345 215 50 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 344 372.5 Tm (T06 Seguridad: read_context; políticas +) Tj ET
+BT /F1 9 Tf 1 0 0 1 344 361.5 Tm (reportes) Tj ET
+0.7 w 390 455 m 440 395 l S
+437 400 m 440 395 l 443 400 l S
+0.7 w 452 395 m 402 455 l S
+399 450 m 402 455 l 405 450 l S
+BT /F1 10 Tf 1 0 0 1 45 310 Tm (Ida: tarea, entradas y permisos. Vuelta: informe con hallazgos, límites y evidencia. T05/T06) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 296 Tm (reciben ambas verificaciones MCP mediante el orquestador. No se invocan entre sí ni comparten) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 282 Tm (una conversación lateral.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 256 Tm (Controlador -> cliente MCP -> filesystem externo por stdio -> copia temporal. Verifica texto) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 242 Tm (leído y denegación del archivo original. Solo main de cada stack llega completo por MCP;) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 228 Tm (fuentes adicionales son extractos. context_receipts identifica truncamientos y huellas del) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 214 Tm (contexto entregado.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 188 Tm (La leyenda solicitada Diagrama confirmado con el proyecto de referencia \(R-27\) requiere) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 174 Tm (confirmación no disponible. Este diagrama se contrastó documentalmente con Colmena Invertida;) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 160 Tm (no se atribuye confirmación al profesor.) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 15 0 R /Annots [] >>
+endobj
+15 0 obj
+<< /Length 4796 >>
+stream
+0.12 0.22 0.19 rg
+0.12 0.22 0.19 RG
+BT /F1 17 Tf 1 0 0 1 45 798 Tm (FET-QX7 | OPITA 360 | Sistema de Agentes) Tj ET
+BT /F1 13 Tf 1 0 0 1 45 768 Tm (2. Sistema de agentes | diagrama de flujo y puertas) Tj ET
+BT /F1 8 Tf 1 0 0 1 45 29 Tm (FET-QX7 | correccion-rubrica | docs/taller-5 | Página 5/8) Tj ET
+0.92 0.96 0.92 rg 60 690 375 36 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 69 705.0 Tm (Humano autoriza alcance \(--approved\)) Tj ET
+0.92 0.96 0.92 rg 60 639 375 36 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 69 654.0 Tm (G1: cuatro checks, suites positivas y contenido vigente) Tj ET
+0.7 w 247 690 m 247 675 l S
+244 680 m 247 675 l 250 680 l S
+0.92 0.96 0.92 rg 60 588 375 36 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 69 603.0 Tm (Plan LLM: contrato válido o hasta 2 correcciones) Tj ET
+0.7 w 247 639 m 247 624 l S
+244 629 m 247 624 l 250 629 l S
+0.92 0.96 0.92 rg 60 537 375 36 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 69 552.0 Tm (T03/T04: lectura MCP + inferencias + reportes) Tj ET
+0.7 w 247 588 m 247 573 l S
+244 578 m 247 573 l 250 578 l S
+0.92 0.96 0.92 rg 60 486 375 36 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 69 501.0 Tm (G2: contratos, hashes y ambas verificaciones MCP) Tj ET
+0.7 w 247 537 m 247 522 l S
+244 527 m 247 522 l 250 527 l S
+0.92 0.96 0.92 rg 60 435 375 36 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 69 450.0 Tm (T05/T06: contraste de informes y políticas) Tj ET
+0.7 w 247 486 m 247 471 l S
+244 476 m 247 471 l 250 476 l S
+0.92 0.96 0.92 rg 60 384 375 36 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 69 399.0 Tm (G3: código y bytes de checks estables) Tj ET
+0.7 w 247 435 m 247 420 l S
+244 425 m 247 420 l 250 425 l S
+0.92 0.96 0.92 rg 60 333 375 36 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 69 348.0 Tm (G4 operador \(CLI\): release_gate + revisión de hallazgos) Tj ET
+0.7 w 247 384 m 247 369 l S
+244 374 m 247 369 l 250 374 l S
+0.92 0.96 0.92 rg 60 282 375 36 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 69 297.0 Tm (Humano revisa: aceptar, corregir o rechazar) Tj ET
+0.7 w 247 333 m 247 318 l S
+244 323 m 247 318 l 250 323 l S
+0.92 0.96 0.92 rg 460 550 90 100 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 469 619.0 Tm (PROPUESTO: Pausa) Tj ET
+BT /F1 9 Tf 1 0 0 1 469 608.0 Tm (del Colibrí, 7 s) Tj ET
+BT /F1 9 Tf 1 0 0 1 469 597.0 Tm (antes de cada) Tj ET
+BT /F1 9 Tf 1 0 0 1 469 586.0 Tm (T03-T06. No) Tj ET
+BT /F1 9 Tf 1 0 0 1 469 575.0 Tm (ejecutada) Tj ET
+[3 3] 0 d
+0.7 w 460 565 m 435 555 l S
+432 560 m 435 555 l 438 560 l S
+[] 0 d
+0.92 0.96 0.92 rg 460 440 90 100 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 469 492.5 Tm (STOP: fallo /) Tj ET
+BT /F1 9 Tf 1 0 0 1 469 481.5 Tm (intentos agotados) Tj ET
+0.7 w 435 657 m 450 657 l S
+445 654 m 450 657 l 445 660 l S
+0.7 w 435 606 m 450 606 l S
+445 603 m 450 606 l 445 609 l S
+0.7 w 435 504 m 450 504 l S
+445 501 m 450 504 l 445 507 l S
+0.7 w 435 402 m 450 402 l S
+445 399 m 450 402 l 445 405 l S
+0.7 w 435 351 m 450 351 l S
+445 348 m 450 351 l 445 354 l S
+450 351 m 450 657 l S
+0.7 w 450 490 m 460 490 l S
+455 487 m 460 490 l 455 493 l S
+BT /F1 8 Tf 1 0 0 1 445 685 Tm (No / fallo) Tj ET
+0.92 0.96 0.92 rg 45 235 155 30 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 54 247.0 Tm (Aceptar: alcance revisado) Tj ET
+0.7 w 247 282 m 122 265 l S
+119 270 m 122 265 l 125 270 l S
+0.92 0.96 0.92 rg 220 235 155 30 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 229 247.0 Tm (Corregir: operador y G1) Tj ET
+0.7 w 247 282 m 297 265 l S
+294 270 m 297 265 l 300 270 l S
+0.92 0.96 0.92 rg 395 235 155 30 re B 0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 404 247.0 Tm (Rechazar: STOP) Tj ET
+0.7 w 247 282 m 472 265 l S
+469 270 m 472 265 l 475 270 l S
+BT /F1 10 Tf 1 0 0 1 45 205 Tm (G1/G2/G3 fallidas, ausencia de modelo, timeout o denegación no esperada: detener, conservar) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 191 Tm (fallo y corregir fuera del ejecutor. Un reporte blocked bloquea. Solo el formato inválido se) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 177 Tm (reintenta automáticamente; al tercer fallo termina. Las flechas descendentes requieren éxito.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 151 Tm (Decisión humana: aceptar autoriza únicamente lo revisado; corregir vuelve al operador y exige) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 137 Tm (nuevas pruebas; rechazar detiene. Ninguna opción ejecuta commit, push o merge. --approved) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 123 Tm (declara alcance, no identidad ni revisión del plan generado;) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 109 Tm (generated_plan_reviewed_by_human=false.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 83 Tm (Pausa del Colibrí figura como diseño propuesto antes de cada delegación, no como ejecución) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 69 Tm (real ni mejora demostrada. Gate final: release_gate exige checks y 14 controles Chrome del) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 55 Tm (mismo contenido; falla cerrado y nunca autoriza publicación.) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 17 0 R /Annots [] >>
+endobj
+17 0 obj
+<< /Length 5696 >>
+stream
+0.12 0.22 0.19 rg
+0.12 0.22 0.19 RG
+BT /F1 17 Tf 1 0 0 1 45 798 Tm (FET-QX7 | OPITA 360 | Sistema de Agentes) Tj ET
+BT /F1 13 Tf 1 0 0 1 45 768 Tm (3. Calidad del código | matriz de controles) Tj ET
+BT /F1 8 Tf 1 0 0 1 45 29 Tm (FET-QX7 | correccion-rubrica | docs/taller-5 | Página 6/8) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 730 Tm (release_gate valida suites y 14 controles Chrome del mismo contenido antes de revisión humana.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 716 Tm (Las puertas automáticas validan resultados del operador; las conclusiones semánticas requieren) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 702 Tm (revisión. Esta matriz distingue qué detecta un fallo y qué queda fuera. Detalle ampliado:) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 688 Tm (matriz-calidad.md.) Tj ET
+0.4 w 45 636 100 26 re S
+BT /F1 8.5 Tf 1 0 0 1 51 647 Tm (Riesgo IA) Tj ET
+0.4 w 145 636 104 26 re S
+BT /F1 8.5 Tf 1 0 0 1 151 647 Tm (Actor / momento) Tj ET
+0.4 w 249 636 160 26 re S
+BT /F1 8.5 Tf 1 0 0 1 255 647 Tm (Control / evidencia) Tj ET
+0.4 w 409 636 141 26 re S
+BT /F1 8.5 Tf 1 0 0 1 415 647 Tm (Bloqueo y límite) Tj ET
+0.4 w 45 598 100 38 re S
+BT /F1 8.5 Tf 1 0 0 1 51 621 Tm (API/dependencia) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 51 609 Tm (inventada) Tj ET
+0.4 w 145 598 104 38 re S
+BT /F1 8.5 Tf 1 0 0 1 151 621 Tm (Frontend/backend; tras) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 151 609 Tm (cambio) Tj ET
+0.4 w 249 598 160 38 re S
+BT /F1 8.5 Tf 1 0 0 1 255 621 Tm (Build, TestClient e imports;) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 255 609 Tm (checks nuevos) Tj ET
+0.4 w 409 598 141 38 re S
+BT /F1 8.5 Tf 1 0 0 1 415 621 Tm (Fallo bloquea G1; no toda API) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 415 609 Tm (externa) Tj ET
+0.4 w 45 560 100 38 re S
+BT /F1 8.5 Tf 1 0 0 1 51 583 Tm (Pruebas vacías) Tj ET
+0.4 w 145 560 104 38 re S
+BT /F1 8.5 Tf 1 0 0 1 151 583 Tm (Host; antes de LLM) Tj ET
+0.4 w 249 560 160 38 re S
+BT /F1 8.5 Tf 1 0 0 1 255 583 Tm (Resumen positivo + OK; regresiones) Tj ET
+0.4 w 409 560 141 38 re S
+BT /F1 8.5 Tf 1 0 0 1 415 583 Tm (Sí G1; no detecta toda) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 415 571 Tm (tautología) Tj ET
+0.4 w 45 522 100 38 re S
+BT /F1 8.5 Tf 1 0 0 1 51 545 Tm (Oráculo débil /) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 51 533 Tm (prueba tautológica) Tj ET
+0.4 w 145 522 104 38 re S
+BT /F1 8.5 Tf 1 0 0 1 151 545 Tm (Calidad + humano;) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 151 533 Tm (revisión tests) Tj ET
+0.4 w 249 522 160 38 re S
+BT /F1 8.5 Tf 1 0 0 1 255 545 Tm (test_api.py y reportes originales) Tj ET
+0.4 w 409 522 141 38 re S
+BT /F1 8.5 Tf 1 0 0 1 415 545 Tm (Oráculos fijos + revisión) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 415 533 Tm (humana; sin mutación) Tj ET
+0.4 w 45 484 100 38 re S
+BT /F1 8.5 Tf 1 0 0 1 51 507 Tm (Presupuesto/validació) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 51 495 Tm (n/regresión) Tj ET
+0.4 w 145 484 104 38 re S
+BT /F1 8.5 Tf 1 0 0 1 151 507 Tm (Backend; tras cambios) Tj ET
+0.4 w 249 484 160 38 re S
+BT /F1 8.5 Tf 1 0 0 1 255 507 Tm (8 TestClient + 2 oráculos fijos:) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 255 495 Tm (ids, total, saldo y límite) Tj ET
+0.4 w 409 484 141 38 re S
+BT /F1 8.5 Tf 1 0 0 1 415 507 Tm (Fallo bloquea G1; oráculos) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 415 495 Tm (fijados al catálogo demo) Tj ET
+0.4 w 45 446 100 38 re S
+BT /F1 8.5 Tf 1 0 0 1 51 469 Tm (Filtros, demo,) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 51 457 Tm (teclado y ARIA) Tj ET
+0.4 w 145 446 104 38 re S
+BT /F1 8.5 Tf 1 0 0 1 151 469 Tm (Frontend; tras build) Tj ET
+0.4 w 249 446 160 38 re S
+BT /F1 8.5 Tf 1 0 0 1 255 469 Tm (14 controles Chrome, JSON y PNG) Tj ET
+0.4 w 409 446 141 38 re S
+BT /F1 8.5 Tf 1 0 0 1 415 469 Tm (release_gate bloquea cierre;) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 415 457 Tm (no WCAG completa) Tj ET
+0.4 w 45 408 100 38 re S
+BT /F1 8.5 Tf 1 0 0 1 51 431 Tm (Arquitectura /) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 51 419 Tm (permisos) Tj ET
+0.4 w 145 408 104 38 re S
+BT /F1 8.5 Tf 1 0 0 1 151 431 Tm (Seguridad + host; cada) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 151 419 Tm (tarea) Tj ET
+0.4 w 249 408 160 38 re S
+BT /F1 8.5 Tf 1 0 0 1 255 431 Tm (Listas permitidas, contratos, SHA,) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 255 419 Tm (MCP negativo) Tj ET
+0.4 w 409 408 141 38 re S
+BT /F1 8.5 Tf 1 0 0 1 415 431 Tm (G2 bloquea; no sandbox OS) Tj ET
+0.4 w 45 370 100 38 re S
+BT /F1 8.5 Tf 1 0 0 1 51 393 Tm (Evidencia de otro) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 51 381 Tm (código) Tj ET
+0.4 w 145 370 104 38 re S
+BT /F1 8.5 Tf 1 0 0 1 151 393 Tm (Host; inicio/cierre) Tj ET
+0.4 w 249 370 160 38 re S
+BT /F1 8.5 Tf 1 0 0 1 255 393 Tm (SHA + archivos, estabilidad de) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 255 381 Tm (checks) Tj ET
+0.4 w 409 370 141 38 re S
+BT /F1 8.5 Tf 1 0 0 1 415 393 Tm (G1/G3; sin firma criptográfica) Tj ET
+0.4 w 45 332 100 38 re S
+BT /F1 8.5 Tf 1 0 0 1 51 355 Tm (Hallazgo falso o no) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 51 343 Tm (resuelto) Tj ET
+0.4 w 145 332 104 38 re S
+BT /F1 8.5 Tf 1 0 0 1 151 355 Tm (Calidad/seguridad +) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 151 343 Tm (humano) Tj ET
+0.4 w 249 332 160 38 re S
+BT /F1 8.5 Tf 1 0 0 1 255 355 Tm (Reportes y puerta de hallazgos) Tj ET
+0.4 w 409 332 141 38 re S
+BT /F1 8.5 Tf 1 0 0 1 415 355 Tm (No aceptación automática; no) Tj ET
+BT /F1 8.5 Tf 1 0 0 1 415 343 Tm (detector semántico universal) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 312 Tm (Se corrigieron: aceptación de registros sin pruebas positivas; invalidación por metadatos Git sin) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 298 Tm (cambio de contenido; ambigüedad entre inspección y aceptación. Se conservan las regresiones previas de) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 284 Tm (checks incompletos y entrega del registro MCP a revisores.) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 258 Tm (Los controles detectan fallos concretos; no certifican toda afirmación del modelo ni sustituyen) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 244 Tm (aceptación humana.) Tj ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 19 0 R /Annots [20 0 R] >>
+endobj
+19 0 obj
+<< /Length 5081 >>
+stream
+0.12 0.22 0.19 rg
+0.12 0.22 0.19 RG
+BT /F1 17 Tf 1 0 0 1 45 798 Tm (FET-QX7 | OPITA 360 | Sistema de Agentes) Tj ET
+BT /F1 13 Tf 1 0 0 1 45 768 Tm (3. Calidad del código | resultados y pendientes) Tj ET
+BT /F1 8 Tf 1 0 0 1 45 29 Tm (FET-QX7 | correccion-rubrica | docs/taller-5 | Página 7/8) Tj ET
+0.4 w 45 704 140 26 re S
+BT /F1 9 Tf 1 0 0 1 51 715 Tm (Ejecución) Tj ET
+0.4 w 185 704 155 26 re S
+BT /F1 9 Tf 1 0 0 1 191 715 Tm (Resultado real) Tj ET
+0.4 w 340 704 210 26 re S
+BT /F1 9 Tf 1 0 0 1 346 715 Tm (Artefacto) Tj ET
+0.4 w 45 678 140 26 re S
+BT /F1 9 Tf 1 0 0 1 51 689 Tm (Agentes) Tj ET
+0.4 w 185 678 155 26 re S
+BT /F1 9 Tf 1 0 0 1 191 689 Tm (42 pruebas aprobadas) Tj ET
+0.4 w 340 678 210 26 re S
+BT /F1 9 Tf 1 0 0 1 346 689 Tm (mejora-tecnica/checks.json) Tj ET
+0.4 w 45 652 140 26 re S
+BT /F1 9 Tf 1 0 0 1 51 663 Tm (Backend) Tj ET
+0.4 w 185 652 155 26 re S
+BT /F1 9 Tf 1 0 0 1 191 663 Tm (8 pruebas aprobadas) Tj ET
+0.4 w 340 652 210 26 re S
+BT /F1 9 Tf 1 0 0 1 346 663 Tm (mejora-tecnica/checks.json; TestClient) Tj ET
+0.4 w 45 626 140 26 re S
+BT /F1 9 Tf 1 0 0 1 51 637 Tm (Sintaxis / build) Tj ET
+0.4 w 185 626 155 26 re S
+BT /F1 9 Tf 1 0 0 1 191 637 Tm (Códigos 0 / 0) Tj ET
+0.4 w 340 626 210 26 re S
+BT /F1 9 Tf 1 0 0 1 346 637 Tm (mejora-tecnica/checks.json) Tj ET
+0.4 w 45 600 140 26 re S
+BT /F1 9 Tf 1 0 0 1 51 611 Tm (Chrome primer intento) Tj ET
+0.4 w 185 600 155 26 re S
+BT /F1 9 Tf 1 0 0 1 191 611 Tm (0 controles; fallo conexión CDP) Tj ET
+0.4 w 340 600 210 26 re S
+BT /F1 9 Tf 1 0 0 1 346 611 Tm (mejora-tecnica/browser/after.json) Tj ET
+0.4 w 45 574 140 26 re S
+BT /F1 9 Tf 1 0 0 1 51 585 Tm (Chrome repetición) Tj ET
+0.4 w 185 574 155 26 re S
+BT /F1 9 Tf 1 0 0 1 191 585 Tm (14/14) Tj ET
+0.4 w 340 574 210 26 re S
+BT /F1 9 Tf 1 0 0 1 346 585 Tm (mejora-tecnica/browser-02/after.json y PNG) Tj ET
+0.4 w 45 548 140 26 re S
+BT /F1 9 Tf 1 0 0 1 51 559 Tm (LLM/MCP revisión anterior) Tj ET
+0.4 w 185 548 155 26 re S
+BT /F1 9 Tf 1 0 0 1 191 559 Tm (5 inferencias; 2 MCP) Tj ET
+0.4 w 340 548 210 26 re S
+BT /F1 9 Tf 1 0 0 1 346 559 Tm (llm-report-03.json; execution-03.json) Tj ET
+0.4 w 45 510 140 38 re S
+BT /F1 9 Tf 1 0 0 1 51 533 Tm (LLM/MCP histórico) Tj ET
+0.4 w 185 510 155 38 re S
+BT /F1 9 Tf 1 0 0 1 191 533 Tm (5 inferencias, 2 sesiones; no) Tj ET
+BT /F1 9 Tf 1 0 0 1 191 521 Tm (reescritas) Tj ET
+0.4 w 340 510 210 38 re S
+BT /F1 9 Tf 1 0 0 1 346 533 Tm (llm-report-final.json) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 490 Tm (El informe nuevo identifica comandos, fechas, resultados y mapa de hashes. Los informes) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 476 Tm (históricos conservan sus bytes. La aceptación de contenido idéntico no exige la misma) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 462 Tm (rama/commit; estos siguen registrados como procedencia. El modelo disponible se comprueba sin) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 448 Tm (instalar ni cambiar proveedor.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 422 Tm (No hay cobertura medida, mutación ni CI propio de Taller 5. Navegador integra la nueva puerta) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 408 Tm (de cierre CLI; no altera las cuatro puertas previas al LLM ni protege main en GitHub.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 394 Tm (Persisten advertencias lucide-react y Starlette/HTTPX. Sin auditoría WCAG completa, lector de) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 380 Tm (pantalla, Safari/Firefox, dispositivos físicos ni persistencia PostgreSQL probada.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 354 Tm (Pendiente con el profesor: aceptación de Codex, definición de escritura-orbital, ITC > 0,87) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 340 Tm (\(sin fórmula\), MutaGato \(sin procedimiento\), cronista-lunar y beneficio atribuido a Pausa del) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 326 Tm (Colibrí. No se inventan coeficientes, certificaciones ni la frase de aprobación del profesor.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 312 Tm (Estos puntos impiden afirmar cumplimiento textual total.) Tj ET
+0.06 0.27 0.62 rg
+BT /F1 10 Tf 1 0 0 1 45 286 Tm (Evidencias publicadas anteriores; corrección nueva aún local) Tj ET
+0.12 0.22 0.19 rg
+BT /F1 10 Tf 1 0 0 1 45 263 Tm (Histórico: checks.json registra 34 pruebas de agentes y 8 de API. frontend-repro.json acredita) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 249 Tm (npm ci y build en copia temporal: Vite 8.3.5 del lockfile, frente a 8.3.8 instalado. No se) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 235 Tm (repitió esa instalación limpia ni la inferencia LLM en esta fase; sus informes corresponden al) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 221 Tm (código anterior. El primer intento LLM/MCP nuevo falló por timeout de npx; llm-execution.json) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 207 Tm (conserva el fallo.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 181 Tm (El LLM puede errar aun con JSON y hashes válidos. revision-hallazgos.md conserva el análisis) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 167 Tm (anterior; correccion-rubrica/contraste-llm.md refuta afirmaciones nuevas sobre selector,) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 153 Tm (presupuesto y reportes. La revisión humana final de este PDF está pendiente.) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 127 Tm (Esperamos que al profesor le guste este enfoque de calidad) Tj ET
+endstream
+endobj
+20 0 obj
+<< /Type /Annot /Subtype /Link /Rect [45 283 375.0 298] /Border [0 0 0] /A << /S /URI /URI (https://github.com/2020morales/opita-360/tree/8cce952bace0763ac5e96208c70e93a304979fb4/docs/taller-5) >> >>
+endobj
+21 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 22 0 R /Annots [23 0 R 24 0 R 25 0 R 26 0 R] >>
+endobj
+22 0 obj
+<< /Length 4143 >>
+stream
+0.12 0.22 0.19 rg
+0.12 0.22 0.19 RG
+BT /F1 17 Tf 1 0 0 1 45 798 Tm (FET-QX7 | OPITA 360 | Sistema de Agentes) Tj ET
+BT /F1 13 Tf 1 0 0 1 45 768 Tm (4. Diferencias con el sistema de referencia) Tj ET
+BT /F1 8 Tf 1 0 0 1 45 29 Tm (FET-QX7 | correccion-rubrica | docs/taller-5 | Página 8/8) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 730 Tm (Comparación documental fijada: backend calidad-agentes/af004c4; frontend 001-project-) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 716 Tm (baseline/33161da, sin rama calidad-agentes identificada. No se ejecutaron las aplicaciones ni) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 702 Tm (pipelines del profesor. reference-evidence.json y correccion-rubrica/referencia-) Tj ET
+BT /F1 10 Tf 1 0 0 1 45 688 Tm (consultada.json conservan fuentes.) Tj ET
+0.4 w 45 636 211 26 re S
+BT /F1 9 Tf 1 0 0 1 51 647 Tm (Referencia concreta) Tj ET
+0.4 w 256 636 294 26 re S
+BT /F1 9 Tf 1 0 0 1 262 647 Tm (OPITA 360 y justificación) Tj ET
+0.4 w 45 598 211 38 re S
+BT /F1 9 Tf 1 0 0 1 51 621 Tm (Colmena Invertida: centro y especialistas) Tj ET
+BT /F1 9 Tf 1 0 0 1 51 609 Tm (sin lateralidad) Tj ET
+0.4 w 256 598 294 38 re S
+BT /F1 9 Tf 1 0 0 1 262 621 Tm (Se conserva retorno central para rastrear decisiones y) Tj ET
+BT /F1 9 Tf 1 0 0 1 262 609 Tm (limitar contexto entre React y FastAPI.) Tj ET
+0.4 w 45 560 211 38 re S
+BT /F1 9 Tf 1 0 0 1 51 583 Tm (architect/test-) Tj ET
+BT /F1 9 Tf 1 0 0 1 51 571 Tm (developer/developer/reviewer/spec-auditor) Tj ET
+0.4 w 256 560 294 38 re S
+BT /F1 9 Tf 1 0 0 1 262 583 Tm (Frontend/backend/calidad/seguridad: revisión de aplicación) Tj ET
+BT /F1 9 Tf 1 0 0 1 262 571 Tm (existente; no pretende implementar TDD completo.) Tj ET
+0.4 w 45 510 211 50 re S
+BT /F1 9 Tf 1 0 0 1 51 545 Tm (Copilot Opus/Sonnet; developer con) Tj ET
+BT /F1 9 Tf 1 0 0 1 51 533 Tm (edit/execute) Tj ET
+0.4 w 256 510 294 50 re S
+BT /F1 9 Tf 1 0 0 1 262 545 Tm (Qwen local sin edición ni shell del modelo: revisión acotada) Tj ET
+BT /F1 9 Tf 1 0 0 1 262 533 Tm (y sin credenciales remotas. Aceptación de herramienta) Tj ET
+BT /F1 9 Tf 1 0 0 1 262 521 Tm (pendiente.) Tj ET
+0.4 w 45 472 211 38 re S
+BT /F1 9 Tf 1 0 0 1 51 495 Tm (.NET/EF Core/PostgreSQL y Angular) Tj ET
+0.4 w 256 472 294 38 re S
+BT /F1 9 Tf 1 0 0 1 262 495 Tm (React/FastAPI con memoria: se conserva el stack real y no se) Tj ET
+BT /F1 9 Tf 1 0 0 1 262 483 Tm (fingen pruebas de base de datos.) Tj ET
+0.4 w 45 434 211 38 re S
+BT /F1 9 Tf 1 0 0 1 51 457 Tm (Context7 y Angular CLI MCP) Tj ET
+0.4 w 256 434 294 38 re S
+BT /F1 9 Tf 1 0 0 1 262 457 Tm (Filesystem real sobre copia temporal: sirve para lectura) Tj ET
+BT /F1 9 Tf 1 0 0 1 262 445 Tm (autorizada; Angular CLI no corresponde al stack React.) Tj ET
+0.4 w 45 396 211 38 re S
+BT /F1 9 Tf 1 0 0 1 51 419 Tm (Preset permite tasks.md, Red/Green y) Tj ET
+BT /F1 9 Tf 1 0 0 1 51 407 Tm (convergencia) Tj ET
+0.4 w 256 396 294 38 re S
+BT /F1 9 Tf 1 0 0 1 262 419 Tm (Cuatro tareas secuenciales fijas y cierre humano: no hay) Tj ET
+BT /F1 9 Tf 1 0 0 1 262 407 Tm (convergencia ni escritura autónoma.) Tj ET
+0.4 w 45 358 211 38 re S
+BT /F1 9 Tf 1 0 0 1 51 381 Tm (CI con cobertura 80%; mutación backend) Tj ET
+BT /F1 9 Tf 1 0 0 1 51 369 Tm (informativa) Tj ET
+0.4 w 256 358 294 38 re S
+BT /F1 9 Tf 1 0 0 1 262 381 Tm (Regresiones y Chrome sin porcentaje ni CI: límites expresos;) Tj ET
+BT /F1 9 Tf 1 0 0 1 262 369 Tm (no se copia una cifra sin medirla.) Tj ET
+0.06 0.27 0.62 rg
+BT /F1 10 Tf 1 0 0 1 45 338 Tm (Backend del profesor: commit consultado) Tj ET
+0.12 0.22 0.19 rg
+0.06 0.27 0.62 rg
+BT /F1 10 Tf 1 0 0 1 45 315 Tm (Frontend del profesor: commit consultado) Tj ET
+0.12 0.22 0.19 rg
+0.06 0.27 0.62 rg
+BT /F1 10 Tf 1 0 0 1 45 292 Tm (Diagrama original de orquestación) Tj ET
+0.12 0.22 0.19 rg
+0.06 0.27 0.62 rg
+BT /F1 10 Tf 1 0 0 1 45 269 Tm (Preset de coordinación y cierre) Tj ET
+0.12 0.22 0.19 rg
+BT /F1 9 Tf 1 0 0 1 45 246 Tm (Verificado por el profesor en la rama calidad-agentes es una leyenda exigida sin aprobación acreditada:) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 232 Tm (queda pendiente, no se presenta como hecho. La comparación realizada es del equipo, no una validación) Tj ET
+BT /F1 9 Tf 1 0 0 1 45 218 Tm (docente.) Tj ET
+endstream
+endobj
+23 0 obj
+<< /Type /Annot /Subtype /Link /Rect [45 335 259.5 350] /Border [0 0 0] /A << /S /URI /URI (https://github.com/777wills/mi-restaurante-ms/tree/af004c49610dab2ab3a7a6bc0e6c8c22e357e2a5) >> >>
+endobj
+24 0 obj
+<< /Type /Annot /Subtype /Link /Rect [45 312 265.0 327] /Border [0 0 0] /A << /S /URI /URI (https://github.com/777wills/mi-restaurante-ui/tree/33161da7c19bba7fdd995a502692ca5f69d67214) >> >>
+endobj
+25 0 obj
+<< /Type /Annot /Subtype /Link /Rect [45 289 226.5 304] /Border [0 0 0] /A << /S /URI /URI (https://github.com/777wills/mi-restaurante-ms/blob/af004c49610dab2ab3a7a6bc0e6c8c22e357e2a5/docs/diagrams/03-patron-orquestador.excalidraw) >> >>
+endobj
+26 0 obj
+<< /Type /Annot /Subtype /Link /Rect [45 266 215.5 281] /Border [0 0 0] /A << /S /URI /URI (https://github.com/777wills/mi-restaurante-ms/blob/af004c49610dab2ab3a7a6bc0e6c8c22e357e2a5/speckit-custom/presets/implement-orchestrator/commands/speckit.implement.md) >> >>
+endobj
+xref
+0 27
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000169 00000 n 
+0000000266 00000 n 
+0000000414 00000 n 
+0000003287 00000 n 
+0000003442 00000 n 
+0000003604 00000 n 
+0000003741 00000 n 
+0000009459 00000 n 
+0000009598 00000 n 
+0000015065 00000 n 
+0000015204 00000 n 
+0000018739 00000 n 
+0000018878 00000 n 
+0000023727 00000 n 
+0000023866 00000 n 
+0000029615 00000 n 
+0000029760 00000 n 
+0000034894 00000 n 
+0000035110 00000 n 
+0000035276 00000 n 
+0000039472 00000 n 
+0000039679 00000 n 
+0000039886 00000 n 
+0000040140 00000 n 
+trailer
+<< /Size 27 /Root 1 0 R >>
+startxref
+40423
+%%EOF
