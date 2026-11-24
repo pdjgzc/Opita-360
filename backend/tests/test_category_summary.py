@@ -181,6 +181,18 @@ class NoMutationAndRegressionTests(unittest.TestCase):
 
     # T014 (a)
     def test_destinations_unchanged_after_category_calls(self):
+        # Catálogo propio y desordenado: detecta mutaciones no idempotentes
+        # (append) y reordenamientos in situ (sort), sin depender del estado
+        # que dejen otras pruebas en el catálogo real.
+        own = [dest("c", "Cultura", 30), dest("a", "Aventura", 20),
+               dest("b", "Cultura", 10), dest("d", "Bienestar", 5)]
+        before = copy.deepcopy(own)
+        with patch("backend.app.main.DESTINATIONS", own):
+            for _ in range(3):
+                self.assertEqual(self.client.get("/api/categories").status_code, 200)
+        self.assertEqual(before, own)
+
+    def test_real_catalog_unchanged_after_category_calls(self):
         before = copy.deepcopy(DESTINATIONS)
         for _ in range(3):
             self.assertEqual(self.client.get("/api/categories").status_code, 200)
