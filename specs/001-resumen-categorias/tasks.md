@@ -171,3 +171,10 @@ Historia 1 (resumen) → historia 2 (coherencia, pruebas de refuerzo) → histor
 - Agentes del flujo: `dev-backend` escribe e implementa T002–T005, T007–T009, T011, T012 y T014 (incluidas las mutaciones temporales de T012 y T014 y su reversión); `verificador` ejecuta T001, T006, T010, T013, T015 y T018.
 - T016 y T017 (arranque del servidor con `curl`, y revisión de `git diff`/`git status`) las realiza la persona revisora: ni `dev-backend` ni `verificador` tienen esos permisos de shell.
 - Sin commit: la integración requiere revisión y autorización humana.
+
+---
+
+## Fase 7: Convergencia
+
+- [ ] T019 Ejecutar `npm test` y `npm run build` en `frontend` e informar los conteos reales; T018 está marcada como hecha pero esa parte no se ejecutó (FR-009, SC-005, constitución VI) (partial)
+- [ ] T020 Reforzar `test_destinations_unchanged_after_category_calls` en `backend/tests/test_category_summary.py` para que detecte mutaciones no idempotentes de `DESTINATIONS` (p. ej. comparar contra una copia tomada al importar el módulo, o usar un catálogo parcheado propio), y verificarlo con una mutación temporal (`append`) revertida después (FR-008, US3/AC2) (partial)
