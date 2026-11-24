@@ -11,7 +11,8 @@ Añadir `GET /api/categories`, una consulta de solo lectura que agrupa `DESTINAT
 `total_destinations` y `currency: "COP"`. La agregación vive en una función pura
 `summarize_categories(destinations)` (snake_case, sin FastAPI ni estado global, no muta su
 entrada) que el endpoint invoca con `DESTINATIONS`. Así se prueba también con un catálogo
-vacío y con catálogos sintéticos. Sin dependencias nuevas; frontend sin cambios.
+vacío y con catálogos sintéticos; el 200 con catálogo vacío también se prueba por HTTP
+parcheando `DESTINATIONS` con `unittest.mock.patch`. Sin dependencias nuevas; frontend sin cambios.
 
 ## Contexto técnico
 
