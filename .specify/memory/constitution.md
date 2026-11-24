@@ -1,6 +1,6 @@
 <!--
-Sync Impact Report (material temporal de revisión; eliminar antes del commit)
-- Cambio de versión: plantilla sin ratificar → 1.0.0
+Sync Impact Report
+- Cambio de versión: plantilla sin ratificar → 1.0.1 (1.0.0 + aclaración del flujo tras revisión humana)
 - Principios añadidos: I. Lógica pura y estado inmutable; II. Contratos de API estables y
   validados; III. Catálogo único en memoria; IV. Pruebas antes de dar algo por hecho;
   V. Accesibilidad y modo demostración; VI. Cambios pequeños, trazables y revisados
@@ -9,7 +9,7 @@ Sync Impact Report (material temporal de revisión; eliminar antes del commit)
 - Pendientes diferidos: ninguno
 - Plantillas dependientes: no se modificaron (se leen en tiempo de ejecución)
 -->
-# OPITA 360 Constitution
+# Constitución de OPITA 360
 
 ## Core Principles
 
@@ -74,11 +74,15 @@ Justificación: las funciones puras se prueban sin navegador y evitan errores de
 
 ## Flujo de trabajo y control humano
 1. Leer `README.md`, `AGENTS.md`, el `AGENTS.md` de la carpeta afectada y la especificación.
-2. Especificación → plan → tareas → pruebas → implementación, con aprobación humana antes de
-   implementar.
+2. Cada funcionalidad sigue el flujo de Spec Kit: `/speckit-specify` → `/speckit-clarify` →
+   `/speckit-plan` → `/speckit-checklist` → `/speckit-tasks` → `/speckit-analyze` →
+   `/speckit-implement` → `/speckit-converge`. Una persona revisa la salida de cada paso
+   antes de seguir y aprueba antes de implementar.
 3. Ejecutar la verificación y revisar los hallazgos antes de proponer un PR.
-4. Un PR individual hacia `main`, revisado por una persona. No se atribuye revisión de terceros
-   sin evidencia.
+4. Cada funcionalidad se trabaja en su propia rama numerada (`NNN-nombre`) y se integra por PR
+   en la rama de trabajo de la que salió, con revisión de una persona. Una rama de trabajo
+   declarada como no fusionable (p. ej. una rama de recuperación) MUST NOT fusionarse en
+   `main`. No se atribuye revisión de terceros sin evidencia.
 
 ## Governance
 - Esta constitución prevalece sobre otras prácticas del proyecto; `AGENTS.md` y los
@@ -90,4 +94,4 @@ Justificación: las funciones puras se prueban sin navegador y evitan errores de
 - Cada PR y revisión MUST verificar el cumplimiento de estos principios; toda complejidad o
   excepción se justifica por escrito en el PR.
 
-**Version**: 1.0.0 | **Ratified**: 2026-11-24 | **Last Amended**: 2026-11-24
+**Version**: 1.0.1 | **Ratified**: 2026-11-24 | **Last Amended**: 2026-11-24
