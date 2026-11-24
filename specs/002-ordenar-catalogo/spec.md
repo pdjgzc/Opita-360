@@ -8,6 +8,12 @@
 
 **Entrada**: Descripción del usuario: «Nombre corto de la funcionalidad: ordenar-catalogo. Quiero que quien explora el catálogo de destinos en la página de OPITA 360 pueda elegir el orden en que se muestran las tarjetas: el orden actual del catálogo (por defecto), precio de menor a mayor, precio de mayor a menor y nombre de la A a la Z. El orden se combina con los filtros que ya existen (búsqueda, categoría, municipio, costo máximo y solo favoritos) sin cambiar qué destinos se muestran, solo su orden. Debe funcionar igual con la API y en modo demostración, usarse con teclado y anunciar el orden elegido a lectores de pantalla.»
 
+## Clarifications
+
+### Session 2026-11-24
+
+- Q: Cuando el orden ya está elegido y se cambia un filtro, ¿el lector de pantalla también debe anunciar el orden y la cantidad de destinos? → A: No. Solo se anuncia al cambiar el orden; los filtros conservan su comportamiento actual.
+
 ## Escenarios de usuario y pruebas *(obligatorio)*
 
 ### Historia de usuario 1 - Elegir el orden de las tarjetas (Prioridad: P1)
@@ -103,7 +109,7 @@ Una persona que usa solo teclado o un lector de pantalla puede llegar al selecto
 - **FR-009**: El orden MUST NOT modificar la lista original de destinos ni el catálogo del que se obtiene; solo cambia la secuencia en que se muestran los resultados.
 - **FR-010**: El comportamiento MUST ser el mismo cuando el catálogo viene de la API y cuando viene del catálogo local del modo demostración, y el orden elegido MUST conservarse si el catálogo cambia de una fuente a otra.
 - **FR-011**: El control de orden MUST tener una etiqueta accesible («Ordenar por») y MUST poder enfocarse y operarse solo con el teclado, con indicador de foco visible, sin perder el foco al cambiar la opción.
-- **FR-012**: Al cambiar el orden, el sistema MUST anunciar a los lectores de pantalla, mediante una región de anuncios no intrusiva, el orden aplicado y la cantidad de destinos mostrados (por ejemplo, «Ordenado por nombre, de la A a la Z. 8 destinos.»), con redacción correcta en singular y plural.
+- **FR-012**: Al cambiar el orden, el sistema MUST anunciar a los lectores de pantalla, mediante una región de anuncios no intrusiva, el orden aplicado y la cantidad de destinos mostrados (por ejemplo, «Ordenado por nombre, de la A a la Z. 8 destinos.»), con redacción correcta en singular y plural. El anuncio ocurre solo al cambiar el orden: cambiar un filtro MUST NOT generar este anuncio y los filtros conservan su comportamiento actual.
 - **FR-013**: Un valor de orden desconocido o ausente MUST tratarse como «Orden del catálogo» sin producir error.
 - **FR-014**: La funcionalidad MUST NOT cambiar el comportamiento, la forma de respuesta ni la lista de endpoints de la API existente ni el contenido del catálogo; no requiere cambios en el servidor.
 - **FR-015**: La funcionalidad MUST incluir pruebas automáticas, escritas antes de implementar, que cubran: cada una de las cuatro opciones con el catálogo actual, el desempate por precio igual, nombres con tildes y mayúsculas, lista vacía, valor de orden desconocido, combinación con cada filtro existente, que la lista de entrada no se modifique y la coincidencia entre la lista de la API y la local.
