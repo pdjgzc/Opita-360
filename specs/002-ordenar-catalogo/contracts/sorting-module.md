@@ -37,7 +37,7 @@ Funciones puras, sin React, sin efectos y sin mutar argumentos.
 
 | Nombre | Firma | Descripción |
 |--------|-------|-------------|
-| `filterFavorites(destinations, favoriteIds, onlyFavorites)` | `(Destino[], string[], boolean) → Destino[]` | Si `onlyFavorites` es verdadero, devuelve un arreglo nuevo con los destinos cuyo `id` está en `favoriteIds`, en su orden de entrada; si es falso, devuelve `destinations` tal cual. |
+| `filterFavorites(destinations, favoriteIds, onlyFavorites)` | `(Destino[], number[], boolean) → Destino[]` | Si `onlyFavorites` es verdadero, devuelve un arreglo nuevo con los destinos cuyo `id` está en `favoriteIds`, en su orden de entrada; si es falso, devuelve `destinations` tal cual. |
 
 Garantías: pura y sin mutar argumentos (acepta arreglos congelados); conserva el orden de entrada; un `favoriteIds` que no sea un arreglo se trata como vacío; con `onlyFavorites` verdadero y sin favoritos → `[]`. `main.jsx` la usa en lugar del filtro en línea, sin cambiar su comportamiento. Combinada con el orden: `sortDestinations(filterFavorites(...), key)` muestra solo los favoritos, ordenados (historia 2, escenario 3).
 
