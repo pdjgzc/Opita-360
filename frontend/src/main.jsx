@@ -1,9 +1,10 @@
 import React, { useEffect, useMemo, useState, useRef } from "react";
 import { createRoot } from "react-dom/client";
-import { ArrowDownRight, ArrowRight, ArrowUpRight, Compass, MapPin, Sparkles, CalendarDays, Wallet, Heart, Menu, X, Mountain, Waves, Search } from "lucide-react";
+import { ArrowDownRight, ArrowRight, ArrowUpRight, Compass, MapPin, Sparkles, CalendarDays, Wallet, Heart, Menu, X, Mountain, Waves, Search, ArrowUpDown } from "lucide-react";
 import "./styles.css";
 import DestinationDetail from "./destination-detail.jsx";
-import { getMunicipalities, validMunicipality, filterDestinations, parseMaxCost } from "./destination-filters.js";
+import { getMunicipalities, validMunicipality, filterDestinations, filterFavorites, parseMaxCost } from "./destination-filters.js";
+import { DEFAULT_SORT, SORT_OPTIONS, sortAnnouncement, sortDestinations, validSort } from "./destination-sorting.js";
 import { loadFavorites, saveFavorites, toggleFavorite, SESSION_NOTICE } from "./favorites.js";
 import { recommendationCandidates } from "./recommendation-municipality.js";
 import { downloadItinerary } from "./export-itinerary.js";
@@ -51,6 +52,8 @@ function App() {
   const [detail, setDetail] = useState(null);
   const [favorites, setFavorites] = useState(() => loadFavorites());
   const [onlyFavorites, setOnlyFavorites] = useState(false);
+  const [sortKey, setSortKey] = useState(DEFAULT_SORT);
+  const [sortMessage, setSortMessage] = useState("");
   const favoritesRef = useRef(favorites);
   const favoritesFilterRef = useRef(null);
   const pendingFavoriteFocus = useRef(false);
@@ -71,8 +74,13 @@ function App() {
 
   const filtered = useMemo(() => {
     const matches = filterDestinations(destinations, { category, municipality, search, maxCost });
-    return onlyFavorites ? matches.filter(destination => favorites.ids.includes(destination.id)) : matches;
+    return filterFavorites(matches, favorites.ids, onlyFavorites);
   }, [destinations, category, municipality, search, maxCost, onlyFavorites, favorites.ids]);
+
+  const visible = useMemo(() => sortDestinations(filtered, sortKey), [filtered, sortKey]);
+
+  // Cualquier recálculo de `filtered` retira el anuncio para no mostrar una cantidad desactualizada.
+  useEffect(() => setSortMessage(""), [filtered]);
 
   useEffect(() => {
     if (pendingFavoriteFocus.current) {
@@ -186,7 +194,7 @@ function App() {
 
       <section className="destinations section-pad" id="destinos">
         <div className="section-heading"><div><span className="section-kicker">LUGARES QUE DEJAN HUELLA</span><h2>El Huila te espera<span className="dot">.</span></h2></div><a className="text-link dark" href="#mapa">Ver mapa <ArrowRight size={16}/></a></div>
-        <div className="filter-row"><div className="searchbox"><Search size={17}/><input aria-label="Buscar destinos por nombre o municipio" value={search} onChange={e=>setSearch(e.target.value)} placeholder="Busca un destino o municipio…"/></div><label className="municipality-filter" htmlFor="municipality-filter"><MapPin size={16} aria-hidden="true"/><span>Municipio</span><select id="municipality-filter" value={municipality} onChange={e=>setMunicipality(e.target.value)}><option value="Todos">Todos los municipios</option>{municipalities.map(m=><option key={m} value={m}>{m}</option>)}</select></label><div className="filters">{["Todos","Naturaleza","Cultura","Aventura","Bienestar"].map(c=><button type="button" key={c} className={category===c?"filter active":"filter"} aria-pressed={category===c} onClick={()=>setCategory(c)}>{c}</button>)}</div></div>
+        <div className="filter-row"><div className="searchbox"><Search size={17}/><input aria-label="Buscar destinos por nombre o municipio" value={search} onChange={e=>setSearch(e.target.value)} placeholder="Busca un destino o municipio…"/></div><label className="municipality-filter" htmlFor="municipality-filter"><MapPin size={16} aria-hidden="true"/><span>Municipio</span><select id="municipality-filter" value={municipality} onChange={e=>setMunicipality(e.target.value)}><option value="Todos">Todos los municipios</option>{municipalities.map(m=><option key={m} value={m}>{m}</option>)}</select></label><div className="sort-control"><label className="municipality-filter sort-filter" htmlFor="sort-order"><ArrowUpDown size={16} aria-hidden="true"/><span>Ordenar por</span><select id="sort-order" value={sortKey} onChange={event => { const next = validSort(event.target.value); setSortKey(next); setSortMessage(sortAnnouncement(next, filtered.length)); }}>{SORT_OPTIONS.map(option=><option key={option.key} value={option.key}>{option.label}</option>)}</select></label><p role="status" aria-live="polite">{sortMessage}</p></div><div className="filters">{["Todos","Naturaleza","Cultura","Aventura","Bienestar"].map(c=><button type="button" key={c} className={category===c?"filter active":"filter"} aria-pressed={category===c} onClick={()=>setCategory(c)}>{c}</button>)}</div></div>
         <form className="cost-filter" onSubmit={applyMaxCost}>
           <label htmlFor="max-cost">Costo máximo por destino (COP)</label>
           <div className="cost-filter-controls"><input id="max-cost" type="text" inputMode="decimal" value={costInput} onChange={event => setCostInput(event.target.value)} aria-invalid={Boolean(costError)} aria-describedby={costError ? "max-cost-hint max-cost-error" : "max-cost-hint"}/>
@@ -199,7 +207,7 @@ function App() {
           <p role="status" aria-live="polite">{favorites.ids.filter(id => destinations.some(destination => destination.id === id)).length} destinos favoritos en el catálogo.</p>
           {favorites.notice && <p className="favorites-notice" role="alert">{favorites.notice}</p>}
         </div>
-        <div className="destination-grid">{filtered.map((d,i)=><article className={`destination-card card-${d.color || "green"}`} key={d.id}>
+        <div className="destination-grid">{visible.map((d,i)=><article className={`destination-card card-${d.color || "green"}`} key={d.id}>
           <div className="destination-image">
             <img className="destination-photo" src={photoSrc(photos[d.name] || photos["Desierto de la Tatacoa"], 400)} srcSet={[400, 800].map(width => `${photoSrc(photos[d.name] || photos["Desierto de la Tatacoa"], width)} ${width}w`).join(", ")} sizes={CARD_SIZES} alt="" loading="lazy" decoding="async" width="600" height="400"/>
             <span className="category-tag">{d.category}</span><button type="button" className={favorites.ids.includes(d.id) ? "heart saved" : "heart"} aria-pressed={favorites.ids.includes(d.id)} aria-label={favorites.ids.includes(d.id) ? `Quitar ${d.name} de favoritos` : `Guardar ${d.name} en favoritos`} title={favorites.ids.includes(d.id) ? "Quitar favorito" : "Guardar favorito"} onClick={()=>toggleDestinationFavorite(d.id)}><Heart size={17} aria-hidden="true"/></button>

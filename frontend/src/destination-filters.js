@@ -27,3 +27,10 @@ export function filterDestinations(destinations, { category = "Todos", municipal
     (municipality === "Todos" || d.municipality === municipality) &&
     (!query || `${d.name} ${d.municipality} ${d.category}`.toLowerCase().includes(query)));
 }
+
+// Keeps only favorite destinations (same inclusion check as before); never mutates inputs.
+export function filterFavorites(destinations, favoriteIds, onlyFavorites) {
+  if (!onlyFavorites) return destinations;
+  const ids = Array.isArray(favoriteIds) ? favoriteIds : [];
+  return destinations.filter(destination => ids.includes(destination.id));
+}

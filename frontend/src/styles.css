@@ -46,3 +46,6 @@
 .destination-image::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,transparent 40%,rgba(9,28,24,.72))}
 @media(max-width:720px){.destination-number{bottom:auto;top:50px}}
 @media(min-width:721px) and (max-width:1050px){.hero-stamp{width:100px;height:100px;top:14px;bottom:auto;right:4%}.hero-stamp b{font-size:20px}.hero-stamp span,.hero-stamp small{font-size:6px}.hero-stamp svg{width:16px;margin-top:3px}}
+.sort-filter select:focus-visible{outline:3px solid #b35b08}
+.sort-control{display:flex;flex-direction:column;gap:4px}
+.sort-control p{margin:0;font-size:13px;color:#3d4d43}
