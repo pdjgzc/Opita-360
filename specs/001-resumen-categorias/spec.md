@@ -4,7 +4,7 @@
 
 **Creada**: 2026-11-24
 
-**Estado**: Borrador
+**Estado**: Aprobada para implementar
 
 **Entrada**: Descripción del usuario: «Nombre corto: resumen-categorias. Quiero que la API de OPITA 360 ofrezca un resumen del catálogo por categoría turística, para que el frontend o cualquier cliente sepa qué categorías hay sin descargar y recorrer todos los destinos. Para cada categoría presente en el catálogo debe indicar cuántos destinos tiene y el precio más bajo y el más alto entre ellos, en pesos colombianos. Solo aparecen categorías que tengan al menos un destino. El resumen debe ser coherente con el catálogo de destinos que ya devuelve la API. Es una consulta de solo lectura y no debe cambiar el comportamiento de los endpoints existentes.»
 

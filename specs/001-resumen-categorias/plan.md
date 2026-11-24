@@ -29,7 +29,7 @@ parcheando `DESTINATIONS` con `unittest.mock.patch`. Sin dependencias nuevas; fr
 
 **Tipo de proyecto**: servicio web (backend FastAPI + frontend React); solo se toca el backend
 
-**Objetivos de rendimiento**: respuesta < 1 s (SC-004); con 8 destinos es O(n) trivial
+**Objetivos de rendimiento**: con 8 destinos el cálculo es O(n) trivial; sin objetivo de latencia propio (SC-004 trata del tamaño del cuerpo, no del tiempo)
 
 **Restricciones**: no cambiar endpoints existentes ni `DESTINATIONS`; no mutar entradas; sin
 parámetros de entrada
@@ -67,7 +67,7 @@ specs/001-resumen-categorias/
 ├── quickstart.md
 ├── contracts/
 │   └── categories.md
-└── tasks.md            # lo genera /speckit-tasks (no existe aún)
+└── tasks.md
 ```
 
 ### Código fuente (raíz del repositorio)
