@@ -6,3 +6,6 @@ __pycache__/
 .env
 .DS_Store
 .venv-taller5/
+
+# Claude Code: configuración local de cada equipo
+.claude/settings.local.json
