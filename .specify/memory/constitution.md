@@ -1,50 +1,93 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report (material temporal de revisión; eliminar antes del commit)
+- Cambio de versión: plantilla sin ratificar → 1.0.0
+- Principios añadidos: I. Lógica pura y estado inmutable; II. Contratos de API estables y
+  validados; III. Catálogo único en memoria; IV. Pruebas antes de dar algo por hecho;
+  V. Accesibilidad y modo demostración; VI. Cambios pequeños, trazables y revisados
+- Secciones añadidas: Restricciones técnicas; Flujo de trabajo y control humano; Gobernanza
+- Secciones eliminadas: ninguna
+- Pendientes diferidos: ninguno
+- Plantillas dependientes: no se modificaron (se leen en tiempo de ejecución)
+-->
+# OPITA 360 Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Lógica pura y estado inmutable
+- En el frontend, la lógica de filtros, orden y validación MUST vivir en módulos `.js` de
+  funciones puras (como `frontend/src/destination-filters.js`), sin dependencias de React.
+- Las funciones MUST NOT mutar sus argumentos: se copian los arreglos antes de ordenar
+  (`[...x].sort(...)`) y el estado de React MUST NOT mutarse directamente. La vista usa
+  estado derivado para filtros.
+- En Python, nombres de funciones, variables y módulos MUST usar `snake_case`.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+Justificación: las funciones puras se prueban sin navegador y evitan errores de render.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### II. Contratos de API estables y validados
+- Toda entrada del backend MUST validarse con FastAPI + Pydantic (límites de rango, longitud
+  y tipo, p. ej. `Field(ge=..., le=...)`, `Path(gt=0)`); no se confía en datos del cliente.
+- Las respuestas MUST seguir siendo compatibles con el frontend; cambiar una forma de
+  respuesta o la URL de la API exige coordinar backend y frontend.
+- Los errores de cliente MUST devolver códigos 4xx con mensajes claros (p. ej. 404
+  «Destino no encontrado», 422 por validación).
+- Un endpoint nuevo MUST NOT romper los existentes: `GET /`, `GET /api/destinations`,
+  `GET /api/destinations/{destination_id}` y `POST /api/recommendations`. CORS no se
+  modifica sin necesidad (puertos locales 8000 y 5173).
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### III. Catálogo único en memoria
+- `DESTINATIONS` en `backend/app/main.py` y `frontend/src/fallback-destinations.json`
+  MUST ser idénticos; una prueba automática (`backend/tests/test_review_fixes.py`) lo
+  verifica y MUST mantenerse.
+- Los destinos y recomendaciones viven en memoria. La documentación y el código MUST NOT
+  afirmar persistencia en PostgreSQL; `database/schema.sql` solo prepara el esquema.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### IV. Pruebas antes de dar algo por hecho (NON-NEGOTIABLE)
+- Cada funcionalidad MUST incluir pruebas automáticas: `unittest` en `backend/tests` y
+  `node --test` en `frontend/tests`.
+- Las pruebas MUST escribirse primero, verse fallar por la razón esperada y luego pasar
+  tras implementar. Los fallos reales se registran; no se simula el ciclo.
+- Cubrir casos normales, vacíos y entradas inválidas.
+- Compilar (`npm run build`) o comprobar sintaxis NO sustituye a las pruebas funcionales.
+  Una tarea no se marca como hecha por haber generado un archivo.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### V. Accesibilidad y modo demostración
+- Todo control MUST tener etiqueta accesible y ser operable con teclado; los estados de
+  carga, error y resultados MUST anunciarse con mensajes en regiones `aria-live`.
+- La aplicación MUST seguir funcionando sin la API, usando
+  `frontend/src/fallback-destinations.json` (modo demostración), con aviso claro al usuario.
+- Los filtros por municipio incluyen la opción «Todos los municipios», se combinan con
+  búsqueda y categoría, y reinician la selección si el catálogo cambia.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### VI. Cambios pequeños, trazables y revisados por una persona
+- Los cambios MUST ser pequeños y acotados al plan aprobado.
+- Cada requisito `FR-NNN` MUST trazarse a tareas y a pruebas concretas.
+- Nada se publica, fusiona ni sube (commit, push, PR, merge) sin revisión y autorización
+  humana explícita.
+- El repositorio MUST NOT contener secretos, tokens, nombres de cuentas ni rutas locales.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Restricciones técnicas
+- Backend: Python 3.10+ con FastAPI y Pydantic.
+- Frontend: React 19 + Vite, con lucide-react para iconos; Node.js 22.12+.
+- No se añaden dependencias, proveedores de pago ni descargas sin aprobación.
+- Verificación desde la raíz: `python -B -m unittest discover -s backend/tests -v` y, en
+  `frontend`, `npm test` y `npm run build`.
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Flujo de trabajo y control humano
+1. Leer `README.md`, `AGENTS.md`, el `AGENTS.md` de la carpeta afectada y la especificación.
+2. Especificación → plan → tareas → pruebas → implementación, con aprobación humana antes de
+   implementar.
+3. Ejecutar la verificación y revisar los hallazgos antes de proponer un PR.
+4. Un PR individual hacia `main`, revisado por una persona. No se atribuye revisión de terceros
+   sin evidencia.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+- Esta constitución prevalece sobre otras prácticas del proyecto; `AGENTS.md` y los
+  `AGENTS.md` de carpeta son guía operativa complementaria.
+- Las enmiendas MUST proponerse mediante PR, con justificación y plan de migración si afectan
+  a código existente, y requieren revisión humana.
+- Versionado semántico: MAJOR por eliminar o redefinir principios de forma incompatible;
+  MINOR por añadir un principio o ampliar materialmente la guía; PATCH por aclaraciones.
+- Cada PR y revisión MUST verificar el cumplimiento de estos principios; toda complejidad o
+  excepción se justifica por escrito en el PR.
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-11-24 | **Last Amended**: 2026-11-24
