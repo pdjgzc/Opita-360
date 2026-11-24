@@ -33,5 +33,5 @@
 
 - Validación en 1 iteración; todos los elementos pasan.
 - FR-009 nombra los cuatro endpoints existentes porque son el contrato que la constitución (principio II) manda no romper; no describe cómo se implementa el resumen.
-- La ruta, el nombre de los campos y la forma exacta de la respuesta del resumen se dejan para `/speckit-plan`.
+- La ruta (`GET /api/categories`) y los campos de la respuesta se fijaron en `/speckit-clarify` (sesión 2026-11-24); son contrato público, no detalle de implementación.
 - El orden alfabético de categorías y la ausencia de filtros son decisiones por defecto documentadas en Supuestos.
