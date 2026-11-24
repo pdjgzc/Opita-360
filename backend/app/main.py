@@ -86,6 +86,40 @@ class TripRequest(BaseModel):
     interests: List[Interest] = Field(default_factory=lambda: ["naturaleza"], max_length=20)
     municipality: Optional[StrictStr] = Field(default=None, max_length=100)
 
+class CategorySummary(BaseModel):
+    category: str
+    count: int
+    min_price: int
+    max_price: int
+
+class CategoriesResponse(BaseModel):
+    total_destinations: int
+    currency: str
+    categories: List[CategorySummary]
+
+def summarize_categories(destinations):
+    """Resume los destinos por categoría en un solo recorrido, sin mutar la entrada."""
+    groups = {}
+    total = 0
+    for destination in destinations:
+        total += 1
+        name = destination["category"]
+        price = destination["price"]
+        group = groups.get(name)
+        if group is None:
+            groups[name] = {"category": name, "count": 1, "min_price": price, "max_price": price}
+        else:
+            group["count"] += 1
+            if price < group["min_price"]:
+                group["min_price"] = price
+            if price > group["max_price"]:
+                group["max_price"] = price
+    return {
+        "total_destinations": total,
+        "currency": "COP",
+        "categories": [groups[name] for name in sorted(groups)],
+    }
+
 @app.get("/")
 def root():
     return {"message": "OPITA 360 API está funcionando", "docs": "/docs"}
@@ -93,6 +127,10 @@ def root():
 @app.get("/api/destinations")
 def list_destinations():
     return {"destinations": DESTINATIONS, "total": len(DESTINATIONS)}
+
+@app.get("/api/categories", response_model=CategoriesResponse)
+def list_categories():
+    return summarize_categories(DESTINATIONS)
 
 @app.get("/api/destinations/{destination_id}")
 def destination_detail(destination_id: int = Path(gt=0)):
