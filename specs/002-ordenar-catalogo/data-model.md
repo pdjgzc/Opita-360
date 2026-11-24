@@ -38,7 +38,7 @@ Validación: `validSort(key)` devuelve `key` si coincide con una opción y `DEFA
 | Estado | Tipo | Valor inicial | Reglas |
 |--------|------|---------------|--------|
 | `sortKey` | texto (clave de opción) | `"catalog"` | Lo cambia solo el selector. No se reinicia al cambiar filtros ni catálogo. No se guarda entre visitas. |
-| `sortMessage` | texto | `""` | Lo establece el manejador del selector. Se vacía cuando cambia el resultado filtrado (vaciar no genera anuncio), así nunca muestra una cantidad desactualizada. Ningún filtro lo establece. |
+| `sortMessage` | texto | `""` | Lo establece el manejador del selector. Se vacía en cualquier recálculo de `filtered` (cambio de filtro, favorito marcado o desmarcado aunque «Solo favoritos» esté apagado, llegada del catálogo de la API; vaciar no genera anuncio), así nunca muestra una cantidad desactualizada. Ningún filtro lo establece. |
 
 ## Transiciones
 
@@ -46,7 +46,7 @@ Validación: `validSort(key)` devuelve `key` si coincide con una opción y `DEFA
 catalog ⇄ price-asc ⇄ price-desc ⇄ name-asc   (cualquier opción puede pasar a cualquier otra)
 ```
 
-Cada transición actualiza `sortKey` y `sortMessage` en el mismo evento. Si después cambia el resultado filtrado (un filtro, un favorito con «solo favoritos» activo o la llegada del catálogo de la API), `sortMessage` pasa a `""` y `sortKey` no cambia. Recargar la página vuelve a `catalog` con mensaje vacío.
+Cada transición actualiza `sortKey` y `sortMessage` en el mismo evento. Si después se recalcula `filtered` (un filtro, un favorito marcado o desmarcado —con «Solo favoritos» activo o no, porque `filtered` depende de `favorites.ids`— o la llegada del catálogo de la API), `sortMessage` pasa a `""` y `sortKey` no cambia. Recargar la página vuelve a `catalog` con mensaje vacío.
 
 ## Relaciones
 

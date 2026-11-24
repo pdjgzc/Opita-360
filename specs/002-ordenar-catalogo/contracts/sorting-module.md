@@ -59,13 +59,13 @@ Estas secuencias se prueban ordenando el contenido real de `frontend/src/fallbac
 | Aspecto | Contrato |
 |---------|----------|
 | Elemento | Misma estructura que el filtro de municipio: `<label className="municipality-filter sort-filter" htmlFor="sort-order">` que envuelve un icono `ArrowUpDown` con `aria-hidden="true"`, `<span>Ordenar por</span>` y `<select id="sort-order">` (FR-011). En JSX se usa `htmlFor`. |
-| Ubicación | dentro de `.filter-row`, después del filtro de municipio; el `<p role="status">` del anuncio, inmediatamente después del label |
+| Ubicación | un contenedor `<div className="sort-control">` dentro de `.filter-row`, después del filtro de municipio; contiene el label y, inmediatamente después, el `<p role="status">` del anuncio (queda debajo del selector) |
 | Opciones | las de `SORT_OPTIONS`, con su `label` como texto y su `key` como valor (FR-001) |
 | Valor inicial | `catalog` (FR-002) |
 | Al cambiar | actualiza `sortKey` y `sortMessage`; reordena las tarjetas sin recarga ni consulta a la API (FR-003); el foco permanece en el selector |
 | Teclado | alcanzable con Tab; opción cambiable con las teclas propias del `<select>`; foco visible con `.sort-filter select:focus-visible` (contorno `3px solid #b35b08`) |
 | Anuncio | `<p role="status" aria-live="polite">` con `sortMessage`; vacío hasta el primer cambio; el mensaje solo se genera al cambiar el orden (FR-012) |
-| Filtros | cambiar un filtro conserva `sortKey`, no genera anuncio y **vacía** `sortMessage` (la región nunca muestra una cantidad desactualizada; vaciar no anuncia); cambiar el orden no modifica ningún filtro (FR-008) |
+| Filtros | cambiar un filtro conserva `sortKey`, no genera anuncio y **vacía** `sortMessage` (como cualquier recálculo de `filtered`, incluido marcar un favorito; la región nunca muestra una cantidad desactualizada; vaciar no anuncia); cambiar el orden no modifica ningún filtro (FR-008) |
 | Catálogo | el paso del catálogo local al de la API, al terminar la consulta inicial, conserva `sortKey` (FR-010); no hay otra recarga de datos sin reiniciar la página. Al cambiar el catálogo cambia `filtered`, así que `sortMessage` se vacía |
 | Tarjetas | se generan desde `visible.map((d, i) => …)`; la numeración `i + 1` sigue la posición visible (FR-016) |
 | Estilos | el label reutiliza `.municipality-filter` (sin modificarla ni agrupar su selector); reglas nuevas mínimas con `font-size` ≥ 12px y contraste ≥ 4.5:1; `frontend/tests/performance-a11y.test.js` pasa sin modificarse (FR-017) |
