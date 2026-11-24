@@ -44,7 +44,7 @@ Quien mantiene el sistema necesita la garantía de que el resumen nunca contradi
 
 1. **Dado** el resumen y el catálogo de destinos, **cuando** se suman los conteos de todas las categorías, **entonces** el resultado es igual al total de destinos del catálogo.
 2. **Dado** cualquier categoría del resumen, **cuando** se filtran los destinos del catálogo con esa categoría, **entonces** su cantidad, su precio más bajo y su precio más alto coinciden con los del resumen.
-3. **Dado** un destino cuya categoría no estaba antes en el catálogo, **cuando** se agrega y se solicita el resumen, **entonces** aparece la nueva categoría sin que haya que cambiar nada más.
+3. **Dado** un catálogo de prueba que incluye una categoría que no existe en el catálogo actual, **cuando** se calcula su resumen, **entonces** la nueva categoría aparece sin cambiar el código del resumen (el catálogo real no cambia mientras corre la API; esto se prueba con un catálogo sintético).
 
 ---
 
@@ -69,8 +69,9 @@ Quien integra la API necesita que añadir el resumen no altere nada de lo que ya
 - ¿Qué ocurre con una categoría sin destinos? No aparece en el resumen; solo se listan categorías con al menos un destino.
 - ¿Qué ocurre si dos destinos tienen el mismo precio? Cuentan ambos; el precio más bajo y el más alto pueden coincidir.
 - ¿Qué ocurre si dos categorías se escriben igual salvo mayúsculas o espacios? Se tratan como categorías distintas, tal como están escritas en el catálogo; el resumen no las reinterpreta (ver Supuestos).
-- ¿Qué ocurre si el cliente envía parámetros que la consulta no admite? El resumen no define parámetros de entrada; cualquier parámetro adicional se ignora y no altera el resultado.
-- ¿Qué ocurre si se usa un método distinto de consulta (por ejemplo, intentar modificar el resumen)? La API responde con un error de cliente de método no permitido; el resumen no se puede modificar.
+- ¿Qué ocurre si el cliente envía parámetros que la consulta no admite? El resumen no define parámetros de entrada; cualquier parámetro de consulta adicional se ignora y no altera el resultado. Como no se lee ninguna entrada del cliente, no hay nada que validar (coherente con el principio II).
+- ¿Qué ocurre si se usa un método distinto de consulta (por ejemplo, intentar modificar el resumen)? La API responde 405 (método no permitido) con el cuerpo de error estándar del proyecto `{"detail": "Method Not Allowed"}`; el resumen no se puede modificar.
+- ¿Qué ocurre si el catálogo tuviera datos inválidos (categoría o precio ausentes)? Fuera de alcance: el catálogo es interno y ya lo vigila la prueba que compara backend y `fallback-destinations.json`. Los errores 5xx, `HEAD`, `OPTIONS` y la barra final en la ruta conservan el comportamiento por defecto de FastAPI y no se especifican aquí.
 
 ## Requisitos *(obligatorio)*
 
@@ -78,14 +79,14 @@ Quien integra la API necesita que añadir el resumen no altere nada de lo que ya
 
 - **FR-001**: El sistema MUST ofrecer una consulta de solo lectura, `GET /api/categories`, que devuelva el resumen del catálogo agrupado por categoría turística.
 - **FR-002**: Para cada categoría incluida, el resumen MUST indicar el nombre de la categoría (`category`), el número de destinos que tiene (`count`), el precio más bajo (`min_price`) y el precio más alto (`max_price`) entre esos destinos.
-- **FR-003**: Los precios del resumen MUST expresarse en pesos colombianos (COP), en la misma unidad y como los mismos valores numéricos que usan los destinos del catálogo, sin conversiones ni redondeos. La respuesta MUST incluir el campo `currency` con el valor `"COP"` para dejar la unidad explícita.
+- **FR-003**: Los precios del resumen MUST expresarse en pesos colombianos (COP), en la misma unidad y como los mismos valores numéricos que usan los destinos del catálogo, sin conversiones ni redondeos: cada `min_price` y `max_price` MUST ser un número entero igual al `price` de algún destino de esa categoría. La respuesta MUST incluir siempre el campo `currency` con el valor `"COP"` (también con el catálogo vacío).
 - **FR-004**: El resumen MUST incluir solo las categorías que tengan al menos un destino en el catálogo; las categorías sin destinos no aparecen.
 - **FR-005**: El resumen MUST derivarse del mismo catálogo de destinos que devuelve la API, de modo que la suma de los conteos por categoría sea igual al total de destinos y los precios mínimo y máximo de cada categoría coincidan con los de sus destinos.
 - **FR-006**: El resumen MUST incluir también el número total de destinos del catálogo (`total_destinations`), para que el cliente verifique la coherencia sin otra consulta.
-- **FR-007**: Las categorías MUST devolverse en un orden estable y predecible (alfabético por nombre de categoría), de modo que dos consultas con el mismo catálogo den respuestas idénticas.
+- **FR-007**: Las categorías MUST devolverse en un orden estable y predecible (orden ascendente del nombre de la categoría tal como está escrito, comparando las cadenas sin normalizar), de modo que dos consultas con el mismo catálogo devuelvan cuerpos JSON iguales, incluido el orden de `categories`.
 - **FR-008**: La consulta MUST NOT modificar el catálogo ni ningún otro dato; solicitarla repetidamente no produce efectos secundarios.
 - **FR-009**: La consulta MUST NOT cambiar el comportamiento ni la forma de respuesta de los endpoints existentes (`GET /`, `GET /api/destinations`, `GET /api/destinations/{destination_id}` y `POST /api/recommendations`).
-- **FR-010**: Con un catálogo vacío, el sistema MUST responder con éxito, con una lista de categorías vacía y un total de 0.
+- **FR-010**: Con un catálogo vacío, el sistema MUST responder con éxito, con código 200, `categories` vacía, `total_destinations` igual a 0 y `currency` igual a `"COP"`.
 - **FR-011**: La consulta MUST NOT requerir parámetros de entrada ni datos del cliente para obtener el resumen completo.
 - **FR-012**: La funcionalidad MUST incluir pruebas automáticas que cubran el catálogo actual, una categoría con un solo destino, el catálogo vacío, la coherencia con la lista de destinos y la no alteración de los endpoints existentes.
 
@@ -102,7 +103,7 @@ Quien integra la API necesita que añadir el resumen no altere nada de lo que ya
 - **SC-001**: Un cliente conoce todas las categorías del catálogo, con su cantidad de destinos y su rango de precios, con una sola consulta, sin necesidad de recorrer la lista de destinos.
 - **SC-002**: En el 100 % de las verificaciones, la suma de los destinos por categoría del resumen es igual al total de destinos del catálogo.
 - **SC-003**: En el 100 % de las categorías, el precio más bajo, el más alto y el conteo del resumen coinciden con los calculados a partir de la lista de destinos.
-- **SC-004**: El resumen del catálogo actual se obtiene en menos de 1 segundo, y su tamaño es menor que el de la lista completa de destinos.
+- **SC-004**: Con el catálogo actual, el cuerpo de la respuesta del resumen ocupa menos bytes que el de `GET /api/destinations` (comprobable en una prueba automática comparando la longitud de ambos cuerpos).
 - **SC-005**: Todas las pruebas existentes de los endpoints actuales siguen pasando sin modificarlas.
 
 ## Supuestos
