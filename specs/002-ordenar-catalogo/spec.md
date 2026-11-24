@@ -102,6 +102,12 @@ Una persona que usa solo teclado o un lector de pantalla puede llegar al selecto
 - ¿Qué ocurre al recargar la página? El orden vuelve a «Orden del catálogo» (no se guarda la elección; ver Supuestos).
 - ¿Qué ocurre si la lógica de orden recibe un valor de orden desconocido? Se trata como «Orden del catálogo» y no produce error.
 
+- ¿Qué ocurre si se elige la misma opción que ya está aplicada? Nada cambia y no se genera un anuncio nuevo (el selector no emite cambio).
+- ¿Qué ocurre con varios cambios de orden seguidos? Cada cambio reordena de inmediato y la región de anuncios muestra solo el último orden aplicado.
+- ¿Cuándo se aplica el orden con el teclado? Cuando el selector nativo emite su evento de cambio; el momento exacto (al mover las flechas o al confirmar) depende del navegador y no se modifica.
+- ¿Cómo se ve en pantallas estrechas o con zoom del 200 %? El selector reutiliza las reglas responsivas del filtro de municipio; no se añaden reglas propias.
+- ¿La región del anuncio es visible? Sí: es un texto pequeño bajo el selector, con el mismo tamaño mínimo y contraste que exige FR-017.
+
 ## Requisitos *(obligatorio)*
 
 ### Requisitos funcionales
@@ -137,8 +143,8 @@ Una persona que usa solo teclado o un lector de pantalla puede llegar al selecto
 - **SC-001**: Con el catálogo actual y sin filtros, las cuatro opciones producen la secuencia esperada de las 8 tarjetas en el 100 % de las verificaciones.
 - **SC-002**: Para cada combinación probada de filtros y cada uno de los cuatro órdenes, el conjunto de destinos mostrados es idéntico, es decir, hay 0 destinos añadidos o perdidos al ordenar.
 - **SC-003**: Una persona puede cambiar el orden y ver las tarjetas reordenadas con una sola acción y en menos de 1 segundo, sin recarga de la página.
-- **SC-004**: Una persona puede llegar al selector, cambiar la opción y confirmar el orden aplicado usando solo el teclado, y el 100 % de los cambios de orden generan un anuncio para lectores de pantalla con el orden y la cantidad de destinos.
-- **SC-005**: Con la API apagada (modo demostración) y con la API conectada, el orden de las tarjetas es idéntico para las mismas opciones en el 100 % de las verificaciones.
+- **SC-004**: Una persona puede llegar al selector, cambiar la opción y confirmar el orden aplicado usando solo el teclado, y cada cambio de orden genera un anuncio con el orden y la cantidad de destinos. Se verifica con la prueba automática de `sortAnnouncement` y con la revisión manual de `quickstart.md` §5.
+- **SC-005**: Con la API apagada (modo demostración) y con la API conectada, el orden de las tarjetas es idéntico para las mismas opciones. Se verifica con la prueba automática sobre `fallback-destinations.json` y con la revisión manual de `quickstart.md` §4.
 - **SC-006**: Todas las pruebas existentes de backend y frontend siguen pasando sin modificarlas.
 
 ## Supuestos
