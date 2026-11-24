@@ -17,7 +17,7 @@ export function sortAnnouncement(key, count) {
   return `${announce} ${count} ${count === 1 ? 'destino' : 'destinos'}.`;
 }
 
-const collator =new Intl.Collator('es', { sensitivity: 'base' });
+const collator = new Intl.Collator('es', { sensitivity: 'base' });
 
 // Array.prototype.sort es estable: los empates conservan el orden de entrada.
 export function sortDestinations(destinations, key) {

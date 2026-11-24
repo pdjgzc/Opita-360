@@ -49,3 +49,5 @@
 .sort-filter select:focus-visible{outline:3px solid #b35b08}
 .sort-control{display:flex;flex-direction:column;gap:4px}
 .sort-control p{margin:0;font-size:13px;color:#3d4d43}
+.filter-row>.municipality-filter,.sort-control{flex-shrink:0}
+@media(min-width:721px){.filter-row{flex-wrap:wrap;justify-content:flex-start}}
